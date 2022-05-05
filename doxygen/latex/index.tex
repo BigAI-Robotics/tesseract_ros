@@ -1,0 +1,227 @@
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+ \href{https://codecov.io/gh/tesseract-robotics/tesseract_planning}{\texttt{ }}
+
+\href{https://github.com/tesseract-robotics/tesseract_python}{\texttt{ }}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Platform   }&\cellcolor{\tableheadbgcolor}\textbf{ CI Status    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Platform   }&\cellcolor{\tableheadbgcolor}\textbf{ CI Status    }\\\cline{1-2}
+\endhead
+Linux (Focal)   &\href{https://github.com/tesseract-robotics/tesseract_planning/actions}{\texttt{ }}    \\\cline{1-2}
+Linux (Bionic)   &\href{https://github.com/tesseract-robotics/tesseract_planning/actions}{\texttt{ }}    \\\cline{1-2}
+Linux (Unstable)   &\href{https://github.com/tesseract-robotics/tesseract_planning/actions}{\texttt{ }}    \\\cline{1-2}
+Windows   &\href{https://github.com/tesseract-robotics/tesseract_planning/actions}{\texttt{ }}    \\\cline{1-2}
+Lint (Clang-\/\+Format)   &\href{https://github.com/tesseract-robotics/tesseract_planning/actions}{\texttt{ }}    \\\cline{1-2}
+Lint (Clang-\/\+Tidy)   &\href{https://github.com/tesseract-robotics/tesseract_planning/actions}{\texttt{ }}    \\\cline{1-2}
+Lint (Code\+Cov)   &\href{https://github.com/tesseract-robotics/tesseract_planning/actions}{\texttt{ }}   \\\cline{1-2}
+\end{longtabu}
+
+
+\href{http://github.com/tesseract-robotics/tesseract_planning/issues}{\texttt{ }}
+
+\href{https://opensource.org/licenses/Apache-2.0}{\texttt{ }} \href{https://opensource.org/licenses/BSD-2-Clause}{\texttt{ }}
+
+\href{http://rosindustrial.org/news/2016/10/7/better-supporting-a-growing-ros-industrial-software-platform}{\texttt{ }}
+
+This include packages related to both motion and process planning for the Tesseract Motion Planning Environment.\hypertarget{index_autotoc_md1}{}\doxysection{Dependencies}\label{index_autotoc_md1}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Dependency   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Version    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Dependency   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Version    }\\\cline{1-2}
+\endhead
+ROS Industrial CMake Boilerplate   &\href{https://github.com/ros-industrial/ros_industrial_cmake_boilerplate/tree/0.2.15}{\texttt{ }}    \\\cline{1-2}
+Tesseract   &\href{https://github.com/tesseract-robotics/tesseract/tree/0.9.6}{\texttt{ }}    \\\cline{1-2}
+IFOPT   &\href{https://github.com/ethz-adrl/ifopt/tree/2.1.3}{\texttt{ }}    \\\cline{1-2}
+Traj\+Opt   &\href{https://github.com/tesseract-robotics/trajopt/tree/0.2.4}{\texttt{ }}    \\\cline{1-2}
+Descartes Light   &\href{https://github.com/swri-robotics/descartes_light/tree/0.3.0}{\texttt{ }}   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{index_autotoc_md2}{}\doxysection{Tesseract Setup Wizard and Visualization Tools}\label{index_autotoc_md2}
+\href{https://snapcraft.io/tesseract-ignition}{\texttt{ }}\hypertarget{index_autotoc_md3}{}\doxysection{Tesseract Planning Packages}\label{index_autotoc_md3}
+
+\begin{DoxyItemize}
+\item {\bfseries{tesseract\+\_\+motion\+\_\+planners}} – This package contains a common interface for Planners and includes implementation for OMPL, Traj\+Opt, Traj\+Opt IFOPT and Descartes.
+\item {\bfseries{tesseract\+\_\+process\+\_\+managers}} – This package contains a common interface for Process Planning and includes implementation for a wide variaty of process found industrial automation like painting, griding, welding, pick and place and more.
+\item {\bfseries{tesseract\+\_\+time\+\_\+parameterization}} – This package contains a time parameterization algorithms and includes iteritive spline.
+\end{DoxyItemize}\hypertarget{index_autotoc_md4}{}\doxysection{Related Repositories}\label{index_autotoc_md4}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/tesseract-robotics/tesseract}{\texttt{ Tesseract}}
+\item \href{https://github.com/tesseract-robotics/tesseract_python}{\texttt{ Tesseract Python}}
+\item \href{https://github.com/tesseract-robotics/tesseract_ros}{\texttt{ Tesseract ROS}}
+\item \href{https://github.com/tesseract-robotics/tesseract_docs}{\texttt{ Tesseract Documentation}}
+\end{DoxyItemize}\hypertarget{index_autotoc_md5}{}\doxysection{Documentation}\label{index_autotoc_md5}
+
+\begin{DoxyItemize}
+\item \href{https://tesseract-docs.readthedocs.io}{\texttt{ Wiki}}
+\item \href{https://tesseract-robotics.github.io/tesseract_planning/}{\texttt{ Doxygen}}
+\item \href{https://tesseract-robotics.github.io/tesseract_planning/dev/bench}{\texttt{ Benchmark}}
+\end{DoxyItemize}\hypertarget{index_autotoc_md6}{}\doxysection{Process Planning Server Tuning}\label{index_autotoc_md6}
+The planning server is built leveraging the library taskflow which enables you to quickly write parallel and heterogeneous tasks programs which aligns well with process motion planning. These types of libraries leverage thread pools to quickly spin up different tasks as needed. One interesting thing found, if a task consumes a lot of memory, then the malloc library can make a performance decision to allow the thread to hold onto the memory it has for subsequent tasks opposed to giving the memory back to your system. This may be fine if this was the only set of tasks being run but typically in our use case there are other computationally intensive processes which could use this memory.\hypertarget{index_autotoc_md7}{}\doxysubsection{Ubuntu}\label{index_autotoc_md7}
+\hypertarget{index_autotoc_md8}{}\doxysubsection{tcmalloc (\+Recommend)}\label{index_autotoc_md8}
+The recommended approach to address memory management is to leverage the {\ttfamily tcmalloc} library which is part of Google Performance Tools ({\ttfamily gperftools}). Experimentation has shown {\ttfamily tcmalloc} to provide more stable memory management when leveraging the planning server.
+
+This capability can be leveraged by linking the exectuable that contains the planning server against {\ttfamily tcmalloc} using the following commands\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{find\_package(tesseract\_common REQUIRED)}
+\DoxyCodeLine{find\_package(tcmalloc REQUIRED)}
+\DoxyCodeLine{}
+\DoxyCodeLine{add\_executable(my\_executable src/my\_executable.cpp)}
+\DoxyCodeLine{target\_link\_libraries(my\_executable PUBLIC tcmalloc::tcmalloc)}
+
+\end{DoxyCode}
+
+
+This library provides a set of run-\/time \href{https://gperftools.github.io/gperftools/tcmalloc.html}{\texttt{ tunables}}, leveraging a set of environment variables.
+
+The one parameter that has been used to configure tcmalloc to give memory back to the OS is {\ttfamily TCMALLOC\+\_\+\+RELEASE\+\_\+\+RATE}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{TCMALLOC\_RELEASE\_RATE   default: 1.0    Rate at which we release unused memory to the system, via madvise(MADV\_DONTNEED), on systems that support it. Zero means we never release memory back to the system. Increase this flag to return memory faster; decrease it to return memory slower. Reasonable rates are in the range [0,10].}
+
+\end{DoxyCode}
+
+
+Note\+: This is typically set in the roslaunch file for the planning server node leveraging the {\ttfamily \texorpdfstring{$<$}{<}env name=\char`\"{}\+TCMALLOC\+\_\+\+RELEASE\+\_\+\+RATE\char`\"{} value=\char`\"{}10\char`\"{}\texorpdfstring{$>$}{>}} tag.\hypertarget{index_autotoc_md9}{}\doxysubsection{$<$tt$>$ptmalloc$<$/tt$>$ (\+Ubuntu OS default)}\label{index_autotoc_md9}
+The great thing is, the default malloc library {\ttfamily ptmalloc} provides run-\/time \href{https://www.gnu.org/software/libc/manual/html_node/Tunables.html}{\texttt{ tunables}} through a set of environment variables.
+
+The one parameter that has been used to configure libc so it always gives back the memory to the system is setting following memory tunnable\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Tunable: glibc.malloc.mmap\_threshold}
+\DoxyCodeLine{}
+\DoxyCodeLine{export GLIBC\_TUNABLES=glibc.malloc.mmap\_threshold=1000000}
+\DoxyCodeLine{}
+\DoxyCodeLine{This tunable supersedes the MALLOC\_MMAP\_THRESHOLD\_ environment variable and is identical in features.}
+\DoxyCodeLine{}
+\DoxyCodeLine{When this tunable is set, all chunks larger than this value in bytes are allocated outside the normal heap, using the mmap system call. This way it is guaranteed that the memory for these chunks can be returned to the system on free. Note that requests smaller than this threshold might still be allocated via mmap.}
+\DoxyCodeLine{}
+\DoxyCodeLine{If this tunable is not set, the default value is set to ‘131072’ bytes and the threshold is adjusted dynamically to suit the allocation patterns of the program. If the tunable is set, the dynamic adjustment is disabled and the value is set as static.}
+
+\end{DoxyCode}
+
+
+Note\+: This is typically set in the roslaunch file for the planning server node leveraging the {\ttfamily \texorpdfstring{$<$}{<}env name=\char`\"{}\+GLIBC\+\_\+\+TUNABLES\char`\"{} value=\char`\"{}glibc.\+malloc.\+mmap\+\_\+threshold=1000000\char`\"{}\texorpdfstring{$>$}{>}} tag.\hypertarget{index_autotoc_md10}{}\doxysubsection{Windows}\label{index_autotoc_md10}
+TBD\hypertarget{index_autotoc_md11}{}\doxysection{Evolution}\label{index_autotoc_md11}
+\href{https://www.youtube.com/watch?v=rxlzlsSBxAY}{\texttt{ }}
+
+How to create\+:
+
+
+\begin{DoxyItemize}
+\item Create Video\+: {\ttfamily gource -\/1280x720 -\/seconds-\/per-\/day 0.\+2 -\/-\/auto-\/skip-\/seconds 0.\+2 -\/-\/disable-\/bloom -\/background d0d3d4 -\/-\/hide filenames,mouse,progress -\/o -\/ $\vert$ ffmpeg -\/y -\/r 60 -\/f image2pipe -\/vcodec ppm -\/i -\/ -\/vcodec libx264 -\/preset ultrafast -\/pix\+\_\+fmt yuv420p -\/crf 1 -\/threads 0 -\/bf 0 gource.\+mp4}
+\item Create Gif\+: {\ttfamily ffmpeg -\/i gource.\+mp4 -\/r 10 -\/vf \char`\"{}scale=800\+:-\/1,split\mbox{[}s0\mbox{]}\mbox{[}s1\mbox{]};\mbox{[}s0\mbox{]}palettegen\mbox{[}p\mbox{]};\mbox{[}s1\mbox{]}\mbox{[}p\mbox{]}paletteuse\char`\"{} tesseract\+\_\+evolution.\+gif}
+\end{DoxyItemize}\hypertarget{index_autotoc_md12}{}\doxysection{TODO\textquotesingle{}s}\label{index_autotoc_md12}
+Warning\+: These packages are under heavy development and are subject to change.
+
+See \href{https://github.com/tesseract-robotics/tesseract/issues/66}{\texttt{ issue \#66}}\hypertarget{index_autotoc_md13}{}\doxysection{Build Instructions}\label{index_autotoc_md13}
+1) Clone repository into your workspace 2) Clone the repositories in the dependencies.\+rosinstall file using wstool or some other method (e.\+g. manually git cloning them) 3) Build the workspace using catkin tools, colcon, or a similar tool
+
+NOTE\+: To speed up clean build you may want to add tesseract\+\_\+ext to an extended workspace.
+
+NOTE\+: Melodic install Task\+Flow from \href{https://launchpad.net/~ros-industrial/+archive/ubuntu/ppa}{\texttt{ ROS-\/\+Industrial PPA}}.\hypertarget{index_autotoc_md14}{}\doxysubsection{Building with Clang-\/\+Tidy Enabled}\label{index_autotoc_md14}
+Must pass the -\/DTESSERACT\+\_\+\+ENABLE\+\_\+\+CLANG\+\_\+\+TIDY=ON to cmake when building. This is automatically enabled if cmake argument -\/DTESSERACT\+\_\+\+ENABLE\+\_\+\+TESTING\+\_\+\+ALL=ON is passed.\hypertarget{index_autotoc_md15}{}\doxysubsection{Building Tests}\label{index_autotoc_md15}
+Must pass the -\/DTESSERACT\+\_\+\+ENABLE\+\_\+\+TESTING=ON to cmake when wanting to build tests. This is automatically enabled if cmake argument -\/DTESSERACT\+\_\+\+ENABLE\+\_\+\+TESTING\+\_\+\+ALL=ON is passed.
+
+NOTE\+: If you are building using catkin tools, use {\ttfamily catkin build -\/-\/force-\/cmake -\/DTESSERACT\+\_\+\+ENABLE\+\_\+\+TESTING=ON}.\hypertarget{index_autotoc_md16}{}\doxysubsubsection{Running Tests}\label{index_autotoc_md16}
+Tesseract packages use ctest because it is ROS agnostic, so to run the test call {\ttfamily catkin test -\/-\/no-\/deps tesseract\+\_\+motion\+\_\+planners tesseract\+\_\+process\+\_\+managers tesseract\+\_\+time\+\_\+parameterization}\hypertarget{index_autotoc_md17}{}\doxysubsection{Building Code Coverage}\label{index_autotoc_md17}
+Must pass the -\/DTESSERACT\+\_\+\+ENABLE\+\_\+\+CODE\+\_\+\+COVERAGE=ON to cmake when wanting to build code coverage. The code coverage report is located in each individuals build directory inside a ccov/all-\/merged folder. Open the index.\+html file to see the packages code coverage report.
+
+NOTE\+: Must be a clean build when generating a code coverage report. Also must build in debug.\hypertarget{index_autotoc_md18}{}\doxysubsubsection{Exclude Code From Code Coverage}\label{index_autotoc_md18}
+
+\begin{DoxyItemize}
+\item LCOV\+\_\+\+EXCL\+\_\+\+LINE
+\begin{DoxyItemize}
+\item Lines containing this marker will be excluded.
+\end{DoxyItemize}
+\item LCOV\+\_\+\+EXCL\+\_\+\+START
+\begin{DoxyItemize}
+\item Marks the beginning of an excluded section. The current line is part of this section.
+\end{DoxyItemize}
+\item LCOV\+\_\+\+EXCL\+\_\+\+STOP
+\begin{DoxyItemize}
+\item Marks the end of an excluded section. The current line not part of this section.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+.. NOTE\+: You can replace {\bfseries{LCOV}} above with {\bfseries{GCOV}} or {\bfseries{GCOVR}}.\hypertarget{index_autotoc_md19}{}\doxysection{Quality Tools Leverage}\label{index_autotoc_md19}
+Tesseract currently leverages Compiler Warnigs, Clang Tidy and Code Coverage. All warnings produced by Compiler and Clang Tidy are treated as errors during CI builds.
+
+
+\begin{DoxyItemize}
+\item Compiler
+\begin{DoxyItemize}
+\item Wall
+\item Wextra
+\item Wconversion
+\item Wsign-\/conversion
+\item Wno-\/sign-\/compare
+\item Wnon-\/virtual-\/dtor
+\end{DoxyItemize}
+\item Clang Tidy
+\begin{DoxyItemize}
+\item clang-\/analyzer-\/$\ast$
+\item bugprone-\/$\ast$
+\item cppcoreguidelines-\/avoid-\/goto
+\item cppcoreguidelines-\/c-\/copy-\/assignment-\/signature
+\item cppcoreguidelines-\/interfaces-\/global-\/init
+\item cppcoreguidelines-\/narrowing-\/conversions
+\item cppcoreguidelines-\/no-\/malloc
+\item cppcoreguidelines-\/slicing
+\item cppcoreguidelines-\/special-\/member-\/functions
+\item misc-\/$\ast$,-\/misc-\/non-\/private-\/member-\/variables-\/in-\/classes
+\item modernize-\/$\ast$,-\/modernize-\/use-\/trailing-\/return-\/type,-\/modernize-\/use-\/nodiscard
+\item performance-\/$\ast$
+\item readability-\/avoid-\/const-\/params-\/in-\/decls
+\item readability-\/container-\/size-\/empty
+\item readability-\/delete-\/null-\/pointer
+\item readability-\/deleted-\/default
+\item readability-\/else-\/after-\/return
+\item readability-\/function-\/size
+\item readability-\/identifier-\/naming
+\item readability-\/inconsistent-\/declaration-\/parameter-\/name
+\item readability-\/misleading-\/indentation
+\item readability-\/misplaced-\/array-\/index
+\item readability-\/non-\/const-\/parameter
+\item readability-\/redundant-\/$\ast$
+\item readability-\/simplify-\/$\ast$
+\item readability-\/static-\/$\ast$
+\item readability-\/string-\/compare
+\item readability-\/uniqueptr-\/delete-\/release
+\item readability-\/rary-\/objects
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{index_autotoc_md20}{}\doxysection{Build Branch Sphinx Documentation}\label{index_autotoc_md20}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd gh\_pages}
+\DoxyCodeLine{sphinx-\/build . output}
+
+\end{DoxyCode}
+ Now open gh\+\_\+pages/output/index.\+rst and remove {\itshape output} directory before commiting changes.\hypertarget{index_autotoc_md21}{}\doxysection{Debugging Windows Build}\label{index_autotoc_md21}
+
+\begin{DoxyItemize}
+\item Search Directories CI
+\begin{DoxyItemize}
+\item dir /s /b c\+:\textbackslash{}opt\textbackslash{}ros\textbackslash{}noetic$\ast$assimp$\ast$
+\end{DoxyItemize}
+\item Location of ROS Windows Builds
+\begin{DoxyItemize}
+\item \href{https://ros-win.visualstudio.com/ros-win/_build}{\texttt{ https\+://ros-\/win.\+visualstudio.\+com/ros-\/win/\+\_\+build}}
+\item \href{https://ros-win.visualstudio.com/ros-win/_build/results?buildId=8711&view=artifacts&type=publishedArtifacts}{\texttt{ https\+://ros-\/win.\+visualstudio.\+com/ros-\/win/\+\_\+build/results?build\+Id=8711\&view=artifacts\&type=published\+Artifacts}} 
+\end{DoxyItemize}
+\end{DoxyItemize}

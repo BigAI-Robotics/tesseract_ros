@@ -1,0 +1,143 @@
+\hypertarget{classtesseract__planning_1_1StateCollisionValidator}{}\doxysection{tesseract\+\_\+planning\+::State\+Collision\+Validator Class Reference}
+\label{classtesseract__planning_1_1StateCollisionValidator}\index{tesseract\_planning::StateCollisionValidator@{tesseract\_planning::StateCollisionValidator}}
+
+
+Continuous collision check between two states.  
+
+
+
+
+{\ttfamily \#include $<$state\+\_\+collision\+\_\+validator.\+h$>$}
+
+
+
+Inheritance diagram for tesseract\+\_\+planning\+::State\+Collision\+Validator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{d6/d51/classtesseract__planning_1_1StateCollisionValidator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tesseract\+\_\+planning\+::State\+Collision\+Validator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d57/classtesseract__planning_1_1StateCollisionValidator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1StateCollisionValidator_a6eff034b80520fea15bed6ecce0393b5}{State\+Collision\+Validator}} (const ompl\+::base\+::\+Space\+Information\+Ptr \&space\+\_\+info, const tesseract\+\_\+environment\+::\+Environment \&env, tesseract\+\_\+kinematics\+::\+Joint\+Group\+::\+Const\+Ptr manip, const tesseract\+\_\+collision\+::\+Collision\+Check\+Config \&collision\+\_\+check\+\_\+config, \mbox{\hyperlink{namespacetesseract__planning_abb4bcd86c07988cf075625fde644e497}{OMPLState\+Extractor}} extractor)
+\item 
+bool \mbox{\hyperlink{classtesseract__planning_1_1StateCollisionValidator_ab25ae0da3293bf3d3310fc677e7b6c5a}{is\+Valid}} (const ompl\+::base\+::\+State $\ast$state) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+kinematics\+::\+Joint\+Group\+::\+Const\+Ptr \mbox{\hyperlink{classtesseract__planning_1_1StateCollisionValidator_aeb45cd490dee9bc2ac424a524941449e}{manip\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The Tesseract Joint Group. \end{DoxyCompactList}\item 
+tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager\+::\+Ptr \mbox{\hyperlink{classtesseract__planning_1_1StateCollisionValidator_a97deb9c4c2195c3c5aeaf0afa71342f1}{contact\+\_\+manager\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The continuous contact manager used for creating cached continuous contact managers. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classtesseract__planning_1_1StateCollisionValidator_ab6418e02b460c43254eebbbb6a2574e3}{links\+\_\+}}
+\begin{DoxyCompactList}\small\item\em A list of active links. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__planning_abb4bcd86c07988cf075625fde644e497}{OMPLState\+Extractor}} \mbox{\hyperlink{classtesseract__planning_1_1StateCollisionValidator_a5e88ed387b88754f07bc11a665d4318c}{extractor\+\_\+}}
+\begin{DoxyCompactList}\small\item\em This will extract an Eigen\+::\+Vector\+Xd from the OMPL State. \end{DoxyCompactList}\item 
+std\+::mutex \mbox{\hyperlink{classtesseract__planning_1_1StateCollisionValidator_a836087fe204cc5141ef8f418dfb9af86}{mutex\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Contact manager caching mutex. \end{DoxyCompactList}\item 
+std\+::map$<$ unsigned long int, tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager\+::\+Ptr $>$ \mbox{\hyperlink{classtesseract__planning_1_1StateCollisionValidator_ac76889937b58337f2bdea2b800bd01c5}{contact\+\_\+managers\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The continuous contact manager cache. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Continuous collision check between two states. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__planning_1_1StateCollisionValidator_a6eff034b80520fea15bed6ecce0393b5}\label{classtesseract__planning_1_1StateCollisionValidator_a6eff034b80520fea15bed6ecce0393b5}} 
+\index{tesseract\_planning::StateCollisionValidator@{tesseract\_planning::StateCollisionValidator}!StateCollisionValidator@{StateCollisionValidator}}
+\index{StateCollisionValidator@{StateCollisionValidator}!tesseract\_planning::StateCollisionValidator@{tesseract\_planning::StateCollisionValidator}}
+\doxysubsubsection{\texorpdfstring{StateCollisionValidator()}{StateCollisionValidator()}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+State\+Collision\+Validator\+::\+State\+Collision\+Validator (\begin{DoxyParamCaption}\item[{const ompl\+::base\+::\+Space\+Information\+Ptr \&}]{space\+\_\+info,  }\item[{const tesseract\+\_\+environment\+::\+Environment \&}]{env,  }\item[{tesseract\+\_\+kinematics\+::\+Joint\+Group\+::\+Const\+Ptr}]{manip,  }\item[{const tesseract\+\_\+collision\+::\+Collision\+Check\+Config \&}]{collision\+\_\+check\+\_\+config,  }\item[{\mbox{\hyperlink{namespacetesseract__planning_abb4bcd86c07988cf075625fde644e497}{OMPLState\+Extractor}}}]{extractor }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__planning_1_1StateCollisionValidator_ab25ae0da3293bf3d3310fc677e7b6c5a}\label{classtesseract__planning_1_1StateCollisionValidator_ab25ae0da3293bf3d3310fc677e7b6c5a}} 
+\index{tesseract\_planning::StateCollisionValidator@{tesseract\_planning::StateCollisionValidator}!isValid@{isValid}}
+\index{isValid@{isValid}!tesseract\_planning::StateCollisionValidator@{tesseract\_planning::StateCollisionValidator}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+planning\+::\+State\+Collision\+Validator\+::is\+Valid (\begin{DoxyParamCaption}\item[{const ompl\+::base\+::\+State $\ast$}]{state }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__planning_1_1StateCollisionValidator_a97deb9c4c2195c3c5aeaf0afa71342f1}\label{classtesseract__planning_1_1StateCollisionValidator_a97deb9c4c2195c3c5aeaf0afa71342f1}} 
+\index{tesseract\_planning::StateCollisionValidator@{tesseract\_planning::StateCollisionValidator}!contact\_manager\_@{contact\_manager\_}}
+\index{contact\_manager\_@{contact\_manager\_}!tesseract\_planning::StateCollisionValidator@{tesseract\_planning::StateCollisionValidator}}
+\doxysubsubsection{\texorpdfstring{contact\_manager\_}{contact\_manager\_}}
+{\footnotesize\ttfamily tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager\+::\+Ptr tesseract\+\_\+planning\+::\+State\+Collision\+Validator\+::contact\+\_\+manager\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The continuous contact manager used for creating cached continuous contact managers. 
+
+\mbox{\Hypertarget{classtesseract__planning_1_1StateCollisionValidator_ac76889937b58337f2bdea2b800bd01c5}\label{classtesseract__planning_1_1StateCollisionValidator_ac76889937b58337f2bdea2b800bd01c5}} 
+\index{tesseract\_planning::StateCollisionValidator@{tesseract\_planning::StateCollisionValidator}!contact\_managers\_@{contact\_managers\_}}
+\index{contact\_managers\_@{contact\_managers\_}!tesseract\_planning::StateCollisionValidator@{tesseract\_planning::StateCollisionValidator}}
+\doxysubsubsection{\texorpdfstring{contact\_managers\_}{contact\_managers\_}}
+{\footnotesize\ttfamily std\+::map$<$unsigned long int, tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager\+::\+Ptr$>$ tesseract\+\_\+planning\+::\+State\+Collision\+Validator\+::contact\+\_\+managers\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+The continuous contact manager cache. 
+
+\mbox{\Hypertarget{classtesseract__planning_1_1StateCollisionValidator_a5e88ed387b88754f07bc11a665d4318c}\label{classtesseract__planning_1_1StateCollisionValidator_a5e88ed387b88754f07bc11a665d4318c}} 
+\index{tesseract\_planning::StateCollisionValidator@{tesseract\_planning::StateCollisionValidator}!extractor\_@{extractor\_}}
+\index{extractor\_@{extractor\_}!tesseract\_planning::StateCollisionValidator@{tesseract\_planning::StateCollisionValidator}}
+\doxysubsubsection{\texorpdfstring{extractor\_}{extractor\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__planning_abb4bcd86c07988cf075625fde644e497}{OMPLState\+Extractor}} tesseract\+\_\+planning\+::\+State\+Collision\+Validator\+::extractor\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This will extract an Eigen\+::\+Vector\+Xd from the OMPL State. 
+
+\mbox{\Hypertarget{classtesseract__planning_1_1StateCollisionValidator_ab6418e02b460c43254eebbbb6a2574e3}\label{classtesseract__planning_1_1StateCollisionValidator_ab6418e02b460c43254eebbbb6a2574e3}} 
+\index{tesseract\_planning::StateCollisionValidator@{tesseract\_planning::StateCollisionValidator}!links\_@{links\_}}
+\index{links\_@{links\_}!tesseract\_planning::StateCollisionValidator@{tesseract\_planning::StateCollisionValidator}}
+\doxysubsubsection{\texorpdfstring{links\_}{links\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ tesseract\+\_\+planning\+::\+State\+Collision\+Validator\+::links\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A list of active links. 
+
+\mbox{\Hypertarget{classtesseract__planning_1_1StateCollisionValidator_aeb45cd490dee9bc2ac424a524941449e}\label{classtesseract__planning_1_1StateCollisionValidator_aeb45cd490dee9bc2ac424a524941449e}} 
+\index{tesseract\_planning::StateCollisionValidator@{tesseract\_planning::StateCollisionValidator}!manip\_@{manip\_}}
+\index{manip\_@{manip\_}!tesseract\_planning::StateCollisionValidator@{tesseract\_planning::StateCollisionValidator}}
+\doxysubsubsection{\texorpdfstring{manip\_}{manip\_}}
+{\footnotesize\ttfamily tesseract\+\_\+kinematics\+::\+Joint\+Group\+::\+Const\+Ptr tesseract\+\_\+planning\+::\+State\+Collision\+Validator\+::manip\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The Tesseract Joint Group. 
+
+\mbox{\Hypertarget{classtesseract__planning_1_1StateCollisionValidator_a836087fe204cc5141ef8f418dfb9af86}\label{classtesseract__planning_1_1StateCollisionValidator_a836087fe204cc5141ef8f418dfb9af86}} 
+\index{tesseract\_planning::StateCollisionValidator@{tesseract\_planning::StateCollisionValidator}!mutex\_@{mutex\_}}
+\index{mutex\_@{mutex\_}!tesseract\_planning::StateCollisionValidator@{tesseract\_planning::StateCollisionValidator}}
+\doxysubsubsection{\texorpdfstring{mutex\_}{mutex\_}}
+{\footnotesize\ttfamily std\+::mutex tesseract\+\_\+planning\+::\+State\+Collision\+Validator\+::mutex\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+Contact manager caching mutex. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+motion\+\_\+planners/ompl/include/tesseract\+\_\+motion\+\_\+planners/ompl/\mbox{\hyperlink{state__collision__validator_8h}{state\+\_\+collision\+\_\+validator.\+h}}\item 
+tesseract\+\_\+motion\+\_\+planners/ompl/src/\mbox{\hyperlink{state__collision__validator_8cpp}{state\+\_\+collision\+\_\+validator.\+cpp}}\end{DoxyCompactItemize}

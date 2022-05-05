@@ -1,0 +1,222 @@
+\hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase}{}\doxysection{tesseract\+\_\+planning\+::detail\+\_\+instruction\+::Instruction\+Inner\+Base Struct Reference}
+\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase}\index{tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}}
+
+
+{\ttfamily \#include $<$instruction.\+h$>$}
+
+
+
+Inheritance diagram for tesseract\+\_\+planning\+::detail\+\_\+instruction\+::Instruction\+Inner\+Base\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{d6/de2/structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a0b76786d48cf5fcb3c666244f5f3df88}{Instruction\+Inner\+Base}} ()=default
+\item 
+virtual \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a14cd92746b2e8eef4167868785132e2d}{$\sim$\+Instruction\+Inner\+Base}} ()=default
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_ae3be4bfe1d31b7422020241f70b70bfa}{Instruction\+Inner\+Base}} (const \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase}{Instruction\+Inner\+Base}} \&)=delete
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase}{Instruction\+Inner\+Base}} \& \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_aa519a311bb93a72fb2816b5ce9c78547}{operator=}} (const \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase}{Instruction\+Inner\+Base}} \&)=delete
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_afcb24451adba1762b43415a8f0c07e0f}{Instruction\+Inner\+Base}} (\mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase}{Instruction\+Inner\+Base}} \&\&)=delete
+\item 
+\mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase}{Instruction\+Inner\+Base}} \& \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a1170a6d83474b2935e52addc54b352b0}{operator=}} (\mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase}{Instruction\+Inner\+Base}} \&\&)=delete
+\item 
+virtual const std\+::string \& \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_afe0532dbd5c110b6beae56998b4f1917}{get\+Description}} () const =0
+\item 
+virtual void \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a111658ecb2c52b4682a1ddcea070eaaa}{set\+Description}} (const std\+::string \&description)=0
+\item 
+virtual void \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a9b6b0409e4c62de9569908cdd42a1c6d}{print}} (const std\+::string \&prefix) const =0
+\item 
+virtual bool \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_abac58aa1a791f594a284955a5397e40d}{operator==}} (const \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase}{Instruction\+Inner\+Base}} \&rhs) const =0
+\item 
+virtual bool \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a79dd78e8f0800c74cb1e50b055cd1ef4}{operator!=}} (const \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase}{Instruction\+Inner\+Base}} \&rhs) const =0
+\item 
+virtual std\+::type\+\_\+index \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_ad7956a7ad1d40fe9792e63f943f0a402}{get\+Type}} () const =0
+\item 
+virtual void $\ast$ \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a7a4b6a2d513e7bc4c1fe45ced7f5f100}{recover}} ()=0
+\item 
+virtual const void $\ast$ \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a254a86d7223e18fc2f4f62a956d7e969}{recover}} () const =0
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase}{Instruction\+Inner\+Base}} $>$ \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_ab9119a2c37172f6e2ce222e741980719}{clone}} () const =0
+\item 
+{\footnotesize template$<$class Archive $>$ }\\TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+PUSH TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+POP void \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a900e4a1f4f1ee25deef4bc49f7c05d6e}{serialize}} (Archive \&, const unsigned int)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_ab23f3af46913efe0941bd9f7521b1551}{serialize}} (Archive \&ar, const unsigned int version)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a0b76786d48cf5fcb3c666244f5f3df88}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a0b76786d48cf5fcb3c666244f5f3df88}} 
+\index{tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}!InstructionInnerBase@{InstructionInnerBase}}
+\index{InstructionInnerBase@{InstructionInnerBase}!tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}}
+\doxysubsubsection{\texorpdfstring{InstructionInnerBase()}{InstructionInnerBase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner\+Base\+::\+Instruction\+Inner\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a14cd92746b2e8eef4167868785132e2d}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a14cd92746b2e8eef4167868785132e2d}} 
+\index{tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}!````~InstructionInnerBase@{$\sim$InstructionInnerBase}}
+\index{````~InstructionInnerBase@{$\sim$InstructionInnerBase}!tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}}
+\doxysubsubsection{\texorpdfstring{$\sim$InstructionInnerBase()}{~InstructionInnerBase()}}
+{\footnotesize\ttfamily virtual tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner\+Base\+::$\sim$\+Instruction\+Inner\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_ae3be4bfe1d31b7422020241f70b70bfa}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_ae3be4bfe1d31b7422020241f70b70bfa}} 
+\index{tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}!InstructionInnerBase@{InstructionInnerBase}}
+\index{InstructionInnerBase@{InstructionInnerBase}!tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}}
+\doxysubsubsection{\texorpdfstring{InstructionInnerBase()}{InstructionInnerBase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner\+Base\+::\+Instruction\+Inner\+Base (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase}{Instruction\+Inner\+Base}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_afcb24451adba1762b43415a8f0c07e0f}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_afcb24451adba1762b43415a8f0c07e0f}} 
+\index{tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}!InstructionInnerBase@{InstructionInnerBase}}
+\index{InstructionInnerBase@{InstructionInnerBase}!tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}}
+\doxysubsubsection{\texorpdfstring{InstructionInnerBase()}{InstructionInnerBase()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner\+Base\+::\+Instruction\+Inner\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase}{Instruction\+Inner\+Base}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_ab9119a2c37172f6e2ce222e741980719}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_ab9119a2c37172f6e2ce222e741980719}} 
+\index{tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}!clone@{clone}}
+\index{clone@{clone}!tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase}{Instruction\+Inner\+Base}} $>$ tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner\+Base\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInner_a38106d847f75b499af4a28f5f33e7ecc}{tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner$<$ T $>$}}.
+
+\mbox{\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_afe0532dbd5c110b6beae56998b4f1917}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_afe0532dbd5c110b6beae56998b4f1917}} 
+\index{tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily virtual const std\+::string \& tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner\+Base\+::get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInner_a16f4fa1f4b342724bf78d7e8ce587a4d}{tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner$<$ T $>$}}.
+
+\mbox{\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_ad7956a7ad1d40fe9792e63f943f0a402}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_ad7956a7ad1d40fe9792e63f943f0a402}} 
+\index{tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}!getType@{getType}}
+\index{getType@{getType}!tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily virtual std\+::type\+\_\+index tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner\+Base\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInner_aad7f0302fc41e780ac106f9973866436}{tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner$<$ T $>$}}.
+
+\mbox{\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a79dd78e8f0800c74cb1e50b055cd1ef4}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a79dd78e8f0800c74cb1e50b055cd1ef4}} 
+\index{tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily virtual bool tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner\+Base\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase}{Instruction\+Inner\+Base}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInner_a87707c474dfc6df70fcc686b8e6172ce}{tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner$<$ T $>$}}.
+
+\mbox{\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_aa519a311bb93a72fb2816b5ce9c78547}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_aa519a311bb93a72fb2816b5ce9c78547}} 
+\index{tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase}{Instruction\+Inner\+Base}} \& tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner\+Base\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase}{Instruction\+Inner\+Base}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a1170a6d83474b2935e52addc54b352b0}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a1170a6d83474b2935e52addc54b352b0}} 
+\index{tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase}{Instruction\+Inner\+Base}} \& tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner\+Base\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase}{Instruction\+Inner\+Base}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_abac58aa1a791f594a284955a5397e40d}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_abac58aa1a791f594a284955a5397e40d}} 
+\index{tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}!operator==@{operator==}}
+\index{operator==@{operator==}!tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily virtual bool tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner\+Base\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase}{Instruction\+Inner\+Base}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInner_ac4665050173ce7de77ceb70f8d913f4d}{tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner$<$ T $>$}}.
+
+\mbox{\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a9b6b0409e4c62de9569908cdd42a1c6d}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a9b6b0409e4c62de9569908cdd42a1c6d}} 
+\index{tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}!print@{print}}
+\index{print@{print}!tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily virtual void tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner\+Base\+::print (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{prefix }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInner_aa47b0daf1fa450f9f4f12a1f5cb7f149}{tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner$<$ T $>$}}.
+
+\mbox{\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a254a86d7223e18fc2f4f62a956d7e969}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a254a86d7223e18fc2f4f62a956d7e969}} 
+\index{tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}!recover@{recover}}
+\index{recover@{recover}!tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}}
+\doxysubsubsection{\texorpdfstring{recover()}{recover()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual const void $\ast$ tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner\+Base\+::recover (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInner_adb8cb26ddc67ed08ff5d7e333abbd828}{tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner$<$ T $>$}}.
+
+\mbox{\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a7a4b6a2d513e7bc4c1fe45ced7f5f100}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a7a4b6a2d513e7bc4c1fe45ced7f5f100}} 
+\index{tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}!recover@{recover}}
+\index{recover@{recover}!tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}}
+\doxysubsubsection{\texorpdfstring{recover()}{recover()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void $\ast$ tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner\+Base\+::recover (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInner_a2b6f912cc8f24308a585ddc2ef0c0a1a}{tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner$<$ T $>$}}.
+
+\mbox{\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a900e4a1f4f1ee25deef4bc49f7c05d6e}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a900e4a1f4f1ee25deef4bc49f7c05d6e}} 
+\index{tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}!serialize@{serialize}}
+\index{serialize@{serialize}!tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+PUSH TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+POP void tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner\+Base\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{,  }\item[{const unsigned int}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_ab23f3af46913efe0941bd9f7521b1551}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_ab23f3af46913efe0941bd9f7521b1551}} 
+\index{tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}!serialize@{serialize}}
+\index{serialize@{serialize}!tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner\+Base\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned int}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a111658ecb2c52b4682a1ddcea070eaaa}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_a111658ecb2c52b4682a1ddcea070eaaa}} 
+\index{tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}!setDescription@{setDescription}}
+\index{setDescription@{setDescription}!tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}}
+\doxysubsubsection{\texorpdfstring{setDescription()}{setDescription()}}
+{\footnotesize\ttfamily virtual void tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner\+Base\+::set\+Description (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{description }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{structtesseract__planning_1_1detail__instruction_1_1InstructionInner_a3277a77d592d1ac095277ae856ec6ffa}{tesseract\+\_\+planning\+::detail\+\_\+instruction\+::\+Instruction\+Inner$<$ T $>$}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{structtesseract__planning_1_1detail__instruction_1_1InstructionInnerBase_ac98d07dd8f7b70e16ccb9a01abf56b9c}} 
+\index{tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}!boost::serialization::access@{boost::serialization::access}}
+\index{boost::serialization::access@{boost::serialization::access}!tesseract\_planning::detail\_instruction::InstructionInnerBase@{tesseract\_planning::detail\_instruction::InstructionInnerBase}}
+\doxysubsubsection{\texorpdfstring{boost::serialization::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+command\+\_\+language/include/tesseract\+\_\+command\+\_\+language/core/\mbox{\hyperlink{instruction_8h}{instruction.\+h}}\item 
+tesseract\+\_\+command\+\_\+language/src/core/\mbox{\hyperlink{instruction_8cpp}{instruction.\+cpp}}\end{DoxyCompactItemize}

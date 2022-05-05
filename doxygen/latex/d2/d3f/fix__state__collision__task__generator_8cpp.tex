@@ -1,0 +1,39 @@
+\hypertarget{fix__state__collision__task__generator_8cpp}{}\doxysection{tesseract\+\_\+process\+\_\+managers/src/task\+\_\+generators/fix\+\_\+state\+\_\+collision\+\_\+task\+\_\+generator.cpp File Reference}
+\label{fix__state__collision__task__generator_8cpp}\index{tesseract\_process\_managers/src/task\_generators/fix\_state\_collision\_task\_generator.cpp@{tesseract\_process\_managers/src/task\_generators/fix\_state\_collision\_task\_generator.cpp}}
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$console\+\_\+bridge/console.\+h$>$}\newline
+{\ttfamily \#include $<$trajopt/problem\+\_\+description.\+hpp$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/timer.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+process\+\_\+managers/core/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+process\+\_\+managers/task\+\_\+generators/fix\+\_\+state\+\_\+collision\+\_\+task\+\_\+generator.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/utils/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/utils/filter\+\_\+functions.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/planner\+\_\+utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/serialization.\+h$>$}\newline
+Include dependency graph for fix\+\_\+state\+\_\+collision\+\_\+task\+\_\+generator.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d08/fix__state__collision__task__generator_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacetesseract__planning}{tesseract\+\_\+planning}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacetesseract__planning_ab8de1e2ad1859b273e7309823a0e3169}{tesseract\+\_\+planning\+::state\+In\+Collision}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&start\+\_\+pos, const \mbox{\hyperlink{structTaskInput}{Task\+Input}} \&input, const Fix\+State\+Collision\+Profile \&profile, tesseract\+\_\+collision\+::\+Contact\+Result\+Map \&contacts)
+\begin{DoxyCompactList}\small\item\em Checks if a joint state is in collision. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__planning_ad363fafbebdbc798d27b67a1b77f2d02}{tesseract\+\_\+planning\+::waypoint\+In\+Collision}} (const Waypoint \&waypoint, const \mbox{\hyperlink{structTaskInput}{Task\+Input}} \&input, const Fix\+State\+Collision\+Profile \&profile, tesseract\+\_\+collision\+::\+Contact\+Result\+Map \&contacts)
+\begin{DoxyCompactList}\small\item\em Checks if a waypoint is in collision. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__planning_a5dd63103a6135dde01a636744ee7fa50}{tesseract\+\_\+planning\+::move\+Waypoint\+From\+Collision\+Trajopt}} (Waypoint \&waypoint, const \mbox{\hyperlink{structTaskInput}{Task\+Input}} \&input, const Fix\+State\+Collision\+Profile \&profile)
+\begin{DoxyCompactList}\small\item\em Takes a waypoint and uses a small trajopt problem to push it out of collision if necessary. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__planning_a93c0a45e4db2b2827bb6cdce50c33858}{tesseract\+\_\+planning\+::move\+Waypoint\+From\+Collision\+Random\+Sampler}} (Waypoint \&waypoint, const \mbox{\hyperlink{structTaskInput}{Task\+Input}} \&input, const Fix\+State\+Collision\+Profile \&profile)
+\begin{DoxyCompactList}\small\item\em Takes a waypoint and uses random sampling to find a position that is out of collision. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__planning_a31f83a3707606af80baa531a0f1a3cfe}{tesseract\+\_\+planning\+::apply\+Correction\+Workflow}} (Waypoint \&waypoint, const \mbox{\hyperlink{structTaskInput}{Task\+Input}} \&input, const Fix\+State\+Collision\+Profile \&profile, tesseract\+\_\+collision\+::\+Contact\+Result\+Map \&contacts)
+\end{DoxyCompactItemize}

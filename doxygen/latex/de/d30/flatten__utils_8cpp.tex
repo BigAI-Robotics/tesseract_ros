@@ -1,0 +1,70 @@
+\hypertarget{flatten__utils_8cpp}{}\doxysection{tesseract\+\_\+command\+\_\+language/src/utils/flatten\+\_\+utils.cpp File Reference}
+\label{flatten__utils_8cpp}\index{tesseract\_command\_language/src/utils/flatten\_utils.cpp@{tesseract\_command\_language/src/utils/flatten\_utils.cpp}}
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$console\+\_\+bridge/console.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/utils/flatten\+\_\+utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/instruction\+\_\+type.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/joint\+\_\+waypoint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/cartesian\+\_\+waypoint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/state\+\_\+waypoint.\+h$>$}\newline
+Include dependency graph for flatten\+\_\+utils.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0c/flatten__utils_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacetesseract__planning}{tesseract\+\_\+planning}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacetesseract__planning_a168b2bd1a9116048bff6c627e5fe4b7a}{tesseract\+\_\+planning\+::flatten\+Helper}} (std\+::vector$<$ std\+::reference\+\_\+wrapper$<$ Instruction $>$ $>$ \&flattened, Composite\+Instruction \&composite, const flatten\+Filter\+Fn \&filter, bool first\+\_\+composite)
+\begin{DoxyCompactList}\small\item\em Helper function used by Flatten. Not intended for direct use. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::reference\+\_\+wrapper$<$ Instruction $>$ $>$ \mbox{\hyperlink{namespacetesseract__planning_a5d5bdd11ad23e6f48bfa70264769706a}{tesseract\+\_\+planning\+::flatten}} (Composite\+Instruction \&composite\+\_\+instruction, const flatten\+Filter\+Fn \&filter=nullptr)
+\begin{DoxyCompactList}\small\item\em Flattens a \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} into a vector of \mbox{\hyperlink{classtesseract__planning_1_1Instruction}{Instruction}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__planning_a9dc3dda762df71df632247928eb34b03}{tesseract\+\_\+planning\+::flatten\+Helper}} (std\+::vector$<$ std\+::reference\+\_\+wrapper$<$ const Instruction $>$ $>$ \&flattened, const Composite\+Instruction \&composite, const flatten\+Filter\+Fn \&filter, bool first\+\_\+composite)
+\begin{DoxyCompactList}\small\item\em Helper function used by Flatten. Not intended for direct use. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::reference\+\_\+wrapper$<$ const Instruction $>$ $>$ \mbox{\hyperlink{namespacetesseract__planning_a94186e3d300a9a74121c08ec235b551c}{tesseract\+\_\+planning\+::flatten}} (const Composite\+Instruction \&composite\+\_\+instruction, const flatten\+Filter\+Fn \&filter=nullptr)
+\begin{DoxyCompactList}\small\item\em Flattens a \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{Composite\+Instruction}} into a vector of \mbox{\hyperlink{classtesseract__planning_1_1Instruction}{Instruction}}\&. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__planning_a6843ffda584b459bfbd47e0da26fbac5}{tesseract\+\_\+planning\+::flatten\+To\+Pattern\+Helper}} (std\+::vector$<$ std\+::reference\+\_\+wrapper$<$ Instruction $>$ $>$ \&flattened, Composite\+Instruction \&composite, const Composite\+Instruction \&pattern, const flatten\+Filter\+Fn \&filter, bool first\+\_\+composite)
+\begin{DoxyCompactList}\small\item\em Helper function used by Flatten\+To\+Pattern. Not intended for direct use. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::reference\+\_\+wrapper$<$ Instruction $>$ $>$ \mbox{\hyperlink{namespacetesseract__planning_a3491366954a613a707dc3a8570ffaa49}{tesseract\+\_\+planning\+::flatten\+To\+Pattern}} (Composite\+Instruction \&composite\+\_\+instruction, const Composite\+Instruction \&pattern, const flatten\+Filter\+Fn \&filter=nullptr)
+\begin{DoxyCompactList}\small\item\em Flattens a composite instruction to the same pattern as the pattern composite instruction. ie, an element of instruction will only be flattened if the corresponding element in pattern is flattenable. The motivation for this utility is a case where you flatten only the elements in a seed that correspond to composites in the parent instruction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__planning_aff3e2e2983634a22d84c109e608390c6}{tesseract\+\_\+planning\+::flatten\+To\+Pattern\+Helper}} (std\+::vector$<$ std\+::reference\+\_\+wrapper$<$ const Instruction $>$ $>$ \&flattened, const Composite\+Instruction \&composite, const Composite\+Instruction \&pattern, const flatten\+Filter\+Fn \&filter, bool first\+\_\+composite)
+\begin{DoxyCompactList}\small\item\em Helper function used by Flatten\+To\+Pattern. Not intended for direct use. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::reference\+\_\+wrapper$<$ const Instruction $>$ $>$ \mbox{\hyperlink{namespacetesseract__planning_ad4f477266dbd5b02cb4ae61fe68fb472}{tesseract\+\_\+planning\+::flatten\+To\+Pattern}} (const Composite\+Instruction \&composite\+\_\+instruction, const Composite\+Instruction \&pattern, const flatten\+Filter\+Fn \&filter=nullptr)
+\begin{DoxyCompactList}\small\item\em Flattens a composite instruction to the same pattern as the pattern composite instruction. ie, an element of instruction will only be flattened if the corresponding element in pattern is flattenable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+June 15, 2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+TODO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000036}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+LICENSE-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+AS IS\char`\"{} BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}

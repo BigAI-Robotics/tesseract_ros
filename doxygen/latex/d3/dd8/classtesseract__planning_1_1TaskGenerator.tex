@@ -1,0 +1,288 @@
+\hypertarget{classtesseract__planning_1_1TaskGenerator}{}\doxysection{tesseract\+\_\+planning\+::Task\+Generator Class Reference}
+\label{classtesseract__planning_1_1TaskGenerator}\index{tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}}
+
+
+This is a base class for generating instances of processes as tasks such that they may be executed in parallel. A typical workflow would be task t = task\+\_\+generator.\+generate\+Task(input, taskflow)  
+
+
+
+
+{\ttfamily \#include $<$task\+\_\+generator.\+h$>$}
+
+
+
+Inheritance diagram for tesseract\+\_\+planning\+::Task\+Generator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d4/dc0/classtesseract__planning_1_1TaskGenerator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tesseract\+\_\+planning\+::Task\+Generator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{d0/da2/classtesseract__planning_1_1TaskGenerator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator_a297d5a46275006503427ab1782f52a9a}{UPtr}} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator}{Task\+Generator}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator_af575e2f6dbed505f3c0678e4f8163a46}{Task\+Generator}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em A task generator base class. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator_a18338e3eb9e438e41c819d587e413e06}{$\sim$\+Task\+Generator}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator_ae64558eb3904db994c3ba952c2bff66e}{Task\+Generator}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator}{Task\+Generator}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator}{Task\+Generator}} \& \mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator_a001d60bb884aa9ebac42cd9f1c71f0d0}{operator=}} (const \mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator}{Task\+Generator}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator_a23f19d96d2e2699b5df778d1aabcdb5f}{Task\+Generator}} (\mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator}{Task\+Generator}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator}{Task\+Generator}} \& \mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator_ab29696fd57167c48ed675651cfb2e475}{operator=}} (\mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator}{Task\+Generator}} \&\&)=delete
+\item 
+virtual const std\+::string \& \mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator_a74fc22337a2befc1ac70066134283c92}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get the task name. \end{DoxyCompactList}\item 
+virtual tf\+::\+Task \mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator_aacf6c44531ab979ee080f73d09ccf745}{generate\+Task}} (\mbox{\hyperlink{structtesseract__planning_1_1TaskInput}{Task\+Input}} input, tf\+::\+Taskflow \&taskflow)
+\begin{DoxyCompactList}\small\item\em Generated a Task. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator_a70f2f16a4c318e160a31d13da9e82b26}{assign\+Task}} (\mbox{\hyperlink{structtesseract__planning_1_1TaskInput}{Task\+Input}} input, tf\+::\+Task \&task)
+\begin{DoxyCompactList}\small\item\em Assign work to the provided task. \end{DoxyCompactList}\item 
+virtual tf\+::\+Task \mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator_a7d409cc625a38c57cb55097085f18853}{generate\+Conditional\+Task}} (\mbox{\hyperlink{structtesseract__planning_1_1TaskInput}{Task\+Input}} input, tf\+::\+Taskflow \&taskflow)
+\begin{DoxyCompactList}\small\item\em Generated a Task. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator_a619c6f9d74864925b4049134bcfa6dcf}{assign\+Conditional\+Task}} (\mbox{\hyperlink{structtesseract__planning_1_1TaskInput}{Task\+Input}} input, tf\+::\+Task \&task)
+\begin{DoxyCompactList}\small\item\em Assign work to the provided task. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator_a168c150554739834a1d467fc726baba8}{process}} (\mbox{\hyperlink{structtesseract__planning_1_1TaskInput}{Task\+Input}} input, std\+::size\+\_\+t unique\+\_\+id) const =0
+\begin{DoxyCompactList}\small\item\em Generated a Task. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator_abaa5b91e60805cfe9276ace7be827f2e}{conditional\+Process}} (\mbox{\hyperlink{structtesseract__planning_1_1TaskInput}{Task\+Input}} input, std\+::size\+\_\+t unique\+\_\+id) const =0
+\begin{DoxyCompactList}\small\item\em Generate Conditional Task. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator_a1007ccf0e726dae903c5652e4b7b7590}{name\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The name of the process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is a base class for generating instances of processes as tasks such that they may be executed in parallel. A typical workflow would be task t = task\+\_\+generator.\+generate\+Task(input, taskflow) 
+
+Only unique pointers should be used because of the ability to abort the process. With recent changes this may no longer be valid but need to investigate. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__planning_1_1TaskGenerator_a297d5a46275006503427ab1782f52a9a}\label{classtesseract__planning_1_1TaskGenerator_a297d5a46275006503427ab1782f52a9a}} 
+\index{tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}!UPtr@{UPtr}}
+\index{UPtr@{UPtr}!tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}}
+\doxysubsubsection{\texorpdfstring{UPtr}{UPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator_a297d5a46275006503427ab1782f52a9a}{tesseract\+\_\+planning\+::\+Task\+Generator\+::\+UPtr}} =  std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator}{Task\+Generator}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__planning_1_1TaskGenerator_af575e2f6dbed505f3c0678e4f8163a46}\label{classtesseract__planning_1_1TaskGenerator_af575e2f6dbed505f3c0678e4f8163a46}} 
+\index{tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}!TaskGenerator@{TaskGenerator}}
+\index{TaskGenerator@{TaskGenerator}!tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}}
+\doxysubsubsection{\texorpdfstring{TaskGenerator()}{TaskGenerator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Task\+Generator\+::\+Task\+Generator (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+A task generator base class. 
+
+The name parameter should also be used as the namespace when looking up profiles in the profile dictionary 
+\begin{DoxyParams}{Parameters}
+{\em name} & The name given to the task. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract__planning_1_1TaskGenerator_a18338e3eb9e438e41c819d587e413e06}\label{classtesseract__planning_1_1TaskGenerator_a18338e3eb9e438e41c819d587e413e06}} 
+\index{tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}!````~TaskGenerator@{$\sim$TaskGenerator}}
+\index{````~TaskGenerator@{$\sim$TaskGenerator}!tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}}
+\doxysubsubsection{\texorpdfstring{$\sim$TaskGenerator()}{~TaskGenerator()}}
+{\footnotesize\ttfamily virtual tesseract\+\_\+planning\+::\+Task\+Generator\+::$\sim$\+Task\+Generator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__planning_1_1TaskGenerator_ae64558eb3904db994c3ba952c2bff66e}\label{classtesseract__planning_1_1TaskGenerator_ae64558eb3904db994c3ba952c2bff66e}} 
+\index{tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}!TaskGenerator@{TaskGenerator}}
+\index{TaskGenerator@{TaskGenerator}!tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}}
+\doxysubsubsection{\texorpdfstring{TaskGenerator()}{TaskGenerator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Task\+Generator\+::\+Task\+Generator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator}{Task\+Generator}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtesseract__planning_1_1TaskGenerator_a23f19d96d2e2699b5df778d1aabcdb5f}\label{classtesseract__planning_1_1TaskGenerator_a23f19d96d2e2699b5df778d1aabcdb5f}} 
+\index{tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}!TaskGenerator@{TaskGenerator}}
+\index{TaskGenerator@{TaskGenerator}!tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}}
+\doxysubsubsection{\texorpdfstring{TaskGenerator()}{TaskGenerator()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+planning\+::\+Task\+Generator\+::\+Task\+Generator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator}{Task\+Generator}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__planning_1_1TaskGenerator_a619c6f9d74864925b4049134bcfa6dcf}\label{classtesseract__planning_1_1TaskGenerator_a619c6f9d74864925b4049134bcfa6dcf}} 
+\index{tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}!assignConditionalTask@{assignConditionalTask}}
+\index{assignConditionalTask@{assignConditionalTask}!tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}}
+\doxysubsubsection{\texorpdfstring{assignConditionalTask()}{assignConditionalTask()}}
+{\footnotesize\ttfamily void tesseract\+\_\+planning\+::\+Task\+Generator\+::assign\+Conditional\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtesseract__planning_1_1TaskInput}{Task\+Input}}}]{input,  }\item[{tf\+::\+Task \&}]{task }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Assign work to the provided task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The process input \\
+\hline
+{\em task} & The task to assign the work to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract__planning_1_1TaskGenerator_a70f2f16a4c318e160a31d13da9e82b26}\label{classtesseract__planning_1_1TaskGenerator_a70f2f16a4c318e160a31d13da9e82b26}} 
+\index{tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}!assignTask@{assignTask}}
+\index{assignTask@{assignTask}!tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}}
+\doxysubsubsection{\texorpdfstring{assignTask()}{assignTask()}}
+{\footnotesize\ttfamily void tesseract\+\_\+planning\+::\+Task\+Generator\+::assign\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtesseract__planning_1_1TaskInput}{Task\+Input}}}]{input,  }\item[{tf\+::\+Task \&}]{task }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Assign work to the provided task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The process input \\
+\hline
+{\em task} & The task to assign the work to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract__planning_1_1TaskGenerator_abaa5b91e60805cfe9276ace7be827f2e}\label{classtesseract__planning_1_1TaskGenerator_abaa5b91e60805cfe9276ace7be827f2e}} 
+\index{tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}!conditionalProcess@{conditionalProcess}}
+\index{conditionalProcess@{conditionalProcess}!tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}}
+\doxysubsubsection{\texorpdfstring{conditionalProcess()}{conditionalProcess()}}
+{\footnotesize\ttfamily virtual int tesseract\+\_\+planning\+::\+Task\+Generator\+::conditional\+Process (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtesseract__planning_1_1TaskInput}{Task\+Input}}}]{input,  }\item[{std\+::size\+\_\+t}]{unique\+\_\+id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Generate Conditional Task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The process input \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Conditional Task 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classtesseract__planning_1_1CheckInputTaskGenerator_a8d44231b7a6dd71dc9872324bf553535}{tesseract\+\_\+planning\+::\+Check\+Input\+Task\+Generator}}, \mbox{\hyperlink{classtesseract__planning_1_1ContinuousContactCheckTaskGenerator_aa35a136322d3798a6e62f56fb581f263}{tesseract\+\_\+planning\+::\+Continuous\+Contact\+Check\+Task\+Generator}}, \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTaskGenerator_ade9bdb8cad61afcd00717bcdca887cb7}{tesseract\+\_\+planning\+::\+Discrete\+Contact\+Check\+Task\+Generator}}, \mbox{\hyperlink{classtesseract__planning_1_1FixStateBoundsTaskGenerator_a51ad565b28d62f98ad21c2579673eac9}{tesseract\+\_\+planning\+::\+Fix\+State\+Bounds\+Task\+Generator}}, \mbox{\hyperlink{classtesseract__planning_1_1FixStateCollisionTaskGenerator_aaf23c969dd53a03e7c39640c875c93ba}{tesseract\+\_\+planning\+::\+Fix\+State\+Collision\+Task\+Generator}}, \mbox{\hyperlink{classtesseract__planning_1_1HasSeedTaskGenerator_ae2ceb5874a30da560deba30063d8e39d}{tesseract\+\_\+planning\+::\+Has\+Seed\+Task\+Generator}}, \mbox{\hyperlink{classtesseract__planning_1_1IterativeSplineParameterizationTaskGenerator_a44a4094e730f2cc8ca288563745de312}{tesseract\+\_\+planning\+::\+Iterative\+Spline\+Parameterization\+Task\+Generator}}, \mbox{\hyperlink{classtesseract__planning_1_1MotionPlannerTaskGenerator_a09d7a340750c4ae37deeac148b1642e0}{tesseract\+\_\+planning\+::\+Motion\+Planner\+Task\+Generator}}, \mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTaskGenerator_af19b46be8cb4878a5c8ad2f4f4c196a8}{tesseract\+\_\+planning\+::\+Profile\+Switch\+Task\+Generator}}, \mbox{\hyperlink{classtesseract__planning_1_1SeedMinLengthTaskGenerator_a2964f2e1975ed5bdb372aee1f9c348d3}{tesseract\+\_\+planning\+::\+Seed\+Min\+Length\+Task\+Generator}}, \mbox{\hyperlink{classtesseract__planning_1_1TimeOptimalParameterizationTaskGenerator_ada1e972fdb44d94ebfc379cba4cb3ee5}{tesseract\+\_\+planning\+::\+Time\+Optimal\+Parameterization\+Task\+Generator}}, \mbox{\hyperlink{classtesseract__planning_1_1UpsampleTrajectoryTaskGenerator_a5cc9382e55697fcd97bb80382e0ba81d}{tesseract\+\_\+planning\+::\+Upsample\+Trajectory\+Task\+Generator}}, and \mbox{\hyperlink{classTestGenerator_a09182c7c94b993d4c51c845d7f3f067f}{Test\+Generator}}.
+
+\mbox{\Hypertarget{classtesseract__planning_1_1TaskGenerator_a7d409cc625a38c57cb55097085f18853}\label{classtesseract__planning_1_1TaskGenerator_a7d409cc625a38c57cb55097085f18853}} 
+\index{tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}!generateConditionalTask@{generateConditionalTask}}
+\index{generateConditionalTask@{generateConditionalTask}!tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}}
+\doxysubsubsection{\texorpdfstring{generateConditionalTask()}{generateConditionalTask()}}
+{\footnotesize\ttfamily tf\+::\+Task tesseract\+\_\+planning\+::\+Task\+Generator\+::generate\+Conditional\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtesseract__planning_1_1TaskInput}{Task\+Input}}}]{input,  }\item[{tf\+::\+Taskflow \&}]{taskflow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Generated a Task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The process input \\
+\hline
+{\em taskflow} & The taskflow to associate the task with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Conditional Task 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__planning_1_1TaskGenerator_aacf6c44531ab979ee080f73d09ccf745}\label{classtesseract__planning_1_1TaskGenerator_aacf6c44531ab979ee080f73d09ccf745}} 
+\index{tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}!generateTask@{generateTask}}
+\index{generateTask@{generateTask}!tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}}
+\doxysubsubsection{\texorpdfstring{generateTask()}{generateTask()}}
+{\footnotesize\ttfamily tf\+::\+Task tesseract\+\_\+planning\+::\+Task\+Generator\+::generate\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtesseract__planning_1_1TaskInput}{Task\+Input}}}]{input,  }\item[{tf\+::\+Taskflow \&}]{taskflow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Generated a Task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The process input \\
+\hline
+{\em taskflow} & The taskflow to associate the task with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Task 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__planning_1_1TaskGenerator_a74fc22337a2befc1ac70066134283c92}\label{classtesseract__planning_1_1TaskGenerator_a74fc22337a2befc1ac70066134283c92}} 
+\index{tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}!getName@{getName}}
+\index{getName@{getName}!tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const std\+::string \& tesseract\+\_\+planning\+::\+Task\+Generator\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the task name. 
+
+This is also the namespace that is used when looking up profiles in the profile dictionary \begin{DoxyReturn}{Returns}
+The name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__planning_1_1TaskGenerator_a001d60bb884aa9ebac42cd9f1c71f0d0}\label{classtesseract__planning_1_1TaskGenerator_a001d60bb884aa9ebac42cd9f1c71f0d0}} 
+\index{tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator}{Task\+Generator}} \& tesseract\+\_\+planning\+::\+Task\+Generator\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator}{Task\+Generator}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtesseract__planning_1_1TaskGenerator_ab29696fd57167c48ed675651cfb2e475}\label{classtesseract__planning_1_1TaskGenerator_ab29696fd57167c48ed675651cfb2e475}} 
+\index{tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator}{Task\+Generator}} \& tesseract\+\_\+planning\+::\+Task\+Generator\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__planning_1_1TaskGenerator}{Task\+Generator}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtesseract__planning_1_1TaskGenerator_a168c150554739834a1d467fc726baba8}\label{classtesseract__planning_1_1TaskGenerator_a168c150554739834a1d467fc726baba8}} 
+\index{tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}!process@{process}}
+\index{process@{process}!tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily virtual void tesseract\+\_\+planning\+::\+Task\+Generator\+::process (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtesseract__planning_1_1TaskInput}{Task\+Input}}}]{input,  }\item[{std\+::size\+\_\+t}]{unique\+\_\+id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Generated a Task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The process input \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Task 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classtesseract__planning_1_1CheckInputTaskGenerator_ada1ca6c3b94d9b4147814494f032a165}{tesseract\+\_\+planning\+::\+Check\+Input\+Task\+Generator}}, \mbox{\hyperlink{classtesseract__planning_1_1ContinuousContactCheckTaskGenerator_a6c79f1991ba03d59aa6a869fe2a8dab2}{tesseract\+\_\+planning\+::\+Continuous\+Contact\+Check\+Task\+Generator}}, \mbox{\hyperlink{classtesseract__planning_1_1DiscreteContactCheckTaskGenerator_a6476b8a6602a9c22c2294fa432e96553}{tesseract\+\_\+planning\+::\+Discrete\+Contact\+Check\+Task\+Generator}}, \mbox{\hyperlink{classtesseract__planning_1_1FixStateBoundsTaskGenerator_a278efb7f1eb897b67957a5a152595063}{tesseract\+\_\+planning\+::\+Fix\+State\+Bounds\+Task\+Generator}}, \mbox{\hyperlink{classtesseract__planning_1_1FixStateCollisionTaskGenerator_a7c97ba0a0234f0956566e273ca5c37f8}{tesseract\+\_\+planning\+::\+Fix\+State\+Collision\+Task\+Generator}}, \mbox{\hyperlink{classtesseract__planning_1_1HasSeedTaskGenerator_a9995317c1b9e2aaca137052ed6d992c7}{tesseract\+\_\+planning\+::\+Has\+Seed\+Task\+Generator}}, \mbox{\hyperlink{classtesseract__planning_1_1IterativeSplineParameterizationTaskGenerator_aa7eeb995beef246f7e10ca8f4bbf9cb8}{tesseract\+\_\+planning\+::\+Iterative\+Spline\+Parameterization\+Task\+Generator}}, \mbox{\hyperlink{classtesseract__planning_1_1MotionPlannerTaskGenerator_aa5dcf42a0c2a120c3c3c6c6fd13ab737}{tesseract\+\_\+planning\+::\+Motion\+Planner\+Task\+Generator}}, \mbox{\hyperlink{classtesseract__planning_1_1ProfileSwitchTaskGenerator_ac49a3661049a7a44a0d55a917f489c65}{tesseract\+\_\+planning\+::\+Profile\+Switch\+Task\+Generator}}, \mbox{\hyperlink{classtesseract__planning_1_1SeedMinLengthTaskGenerator_a05c6f979bb1876db6f3c0c557d8fd727}{tesseract\+\_\+planning\+::\+Seed\+Min\+Length\+Task\+Generator}}, \mbox{\hyperlink{classtesseract__planning_1_1TimeOptimalParameterizationTaskGenerator_aec90851b288c89e9207a152ebd91b7e8}{tesseract\+\_\+planning\+::\+Time\+Optimal\+Parameterization\+Task\+Generator}}, \mbox{\hyperlink{classtesseract__planning_1_1UpsampleTrajectoryTaskGenerator_a4509acb3ed416ee29398427be518dba8}{tesseract\+\_\+planning\+::\+Upsample\+Trajectory\+Task\+Generator}}, and \mbox{\hyperlink{classTestGenerator_a32bb740843dbb25a6a870af2dab933f2}{Test\+Generator}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__planning_1_1TaskGenerator_a1007ccf0e726dae903c5652e4b7b7590}\label{classtesseract__planning_1_1TaskGenerator_a1007ccf0e726dae903c5652e4b7b7590}} 
+\index{tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}!name\_@{name\_}}
+\index{name\_@{name\_}!tesseract\_planning::TaskGenerator@{tesseract\_planning::TaskGenerator}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+planning\+::\+Task\+Generator\+::name\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The name of the process. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+process\+\_\+managers/include/tesseract\+\_\+process\+\_\+managers/core/\mbox{\hyperlink{task__generator_8h}{task\+\_\+generator.\+h}}\item 
+tesseract\+\_\+process\+\_\+managers/src/core/\mbox{\hyperlink{task__generator_8cpp}{task\+\_\+generator.\+cpp}}\end{DoxyCompactItemize}

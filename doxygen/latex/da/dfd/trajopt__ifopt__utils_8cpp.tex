@@ -1,0 +1,87 @@
+\hypertarget{trajopt__ifopt__utils_8cpp}{}\doxysection{tesseract\+\_\+motion\+\_\+planners/trajopt\+\_\+ifopt/src/trajopt\+\_\+ifopt\+\_\+utils.cpp File Reference}
+\label{trajopt__ifopt__utils_8cpp}\index{tesseract\_motion\_planners/trajopt\_ifopt/src/trajopt\_ifopt\_utils.cpp@{tesseract\_motion\_planners/trajopt\_ifopt/src/trajopt\_ifopt\_utils.cpp}}
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt\+\_\+ifopt/trajopt\+\_\+ifopt\+\_\+utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt\+\_\+ifopt/trajopt\+\_\+ifopt\+\_\+problem.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/types.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+collision/core/common.\+h$>$}\newline
+{\ttfamily \#include $<$trajopt\+\_\+ifopt/trajopt\+\_\+ifopt.\+h$>$}\newline
+{\ttfamily \#include $<$ifopt/problem.\+h$>$}\newline
+Include dependency graph for trajopt\+\_\+ifopt\+\_\+utils.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/dd5/trajopt__ifopt__utils_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacetesseract__planning}{tesseract\+\_\+planning}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ifopt\+::\+Constraint\+Set\+::\+Ptr \mbox{\hyperlink{namespacetesseract__planning_ada99db5aba43e83678ab889b2f689c52}{tesseract\+\_\+planning\+::create\+Cartesian\+Position\+Constraint}} (const trajopt\+\_\+ifopt\+::\+Joint\+Position\+::\+Const\+Ptr \&var, const tesseract\+\_\+kinematics\+::\+Joint\+Group\+::\+Const\+Ptr \&manip, const std\+::string \&source\+\_\+frame, const std\+::string \&target\+\_\+frame, const Eigen\+::\+Isometry3d \&source\+\_\+frame\+\_\+offset=Eigen\+::\+Isometry3d\+::\+Identity(), const Eigen\+::\+Isometry3d \&target\+\_\+frame\+\_\+offset=Eigen\+::\+Isometry3d\+::\+Identity(), const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&coeffs=Eigen\+::\+Vector\+Xd\+::\+Ones(6))
+\item 
+bool \mbox{\hyperlink{namespacetesseract__planning_a43989916928f32acc449fd4aaadfe09a}{tesseract\+\_\+planning\+::add\+Cartesian\+Position\+Constraint}} (trajopt\+\_\+sqp\+::\+QPProblem \&nlp, const trajopt\+\_\+ifopt\+::\+Joint\+Position\+::\+Const\+Ptr \&var, const tesseract\+\_\+kinematics\+::\+Joint\+Group\+::\+Const\+Ptr \&manip, const std\+::string \&source\+\_\+frame, const std\+::string \&target\+\_\+frame, const Eigen\+::\+Isometry3d \&source\+\_\+frame\+\_\+offset=Eigen\+::\+Isometry3d\+::\+Identity(), const Eigen\+::\+Isometry3d \&target\+\_\+frame\+\_\+offset=Eigen\+::\+Isometry3d\+::\+Identity(), const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&coeffs=Eigen\+::\+Vector\+Xd\+::\+Ones(6))
+\item 
+bool \mbox{\hyperlink{namespacetesseract__planning_ae98255bb1c15bc3373c2bdaa41658ea6}{tesseract\+\_\+planning\+::add\+Cartesian\+Position\+Squared\+Cost}} (trajopt\+\_\+sqp\+::\+QPProblem \&nlp, const trajopt\+\_\+ifopt\+::\+Joint\+Position\+::\+Const\+Ptr \&var, const tesseract\+\_\+kinematics\+::\+Joint\+Group\+::\+Const\+Ptr \&manip, const std\+::string \&source\+\_\+frame, const std\+::string \&target\+\_\+frame, const Eigen\+::\+Isometry3d \&source\+\_\+frame\+\_\+offset=Eigen\+::\+Isometry3d\+::\+Identity(), const Eigen\+::\+Isometry3d \&target\+\_\+frame\+\_\+offset=Eigen\+::\+Isometry3d\+::\+Identity(), const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&coeffs=Eigen\+::\+Vector\+Xd\+::\+Ones(6))
+\item 
+bool \mbox{\hyperlink{namespacetesseract__planning_aa70ead0956b13c6cadd4c9f0f78210f1}{tesseract\+\_\+planning\+::add\+Cartesian\+Position\+Absolute\+Cost}} (trajopt\+\_\+sqp\+::\+QPProblem \&nlp, const trajopt\+\_\+ifopt\+::\+Joint\+Position\+::\+Const\+Ptr \&var, const tesseract\+\_\+kinematics\+::\+Joint\+Group\+::\+Const\+Ptr \&manip, const std\+::string \&source\+\_\+frame, const std\+::string \&target\+\_\+frame, const Eigen\+::\+Isometry3d \&source\+\_\+frame\+\_\+offset=Eigen\+::\+Isometry3d\+::\+Identity(), const Eigen\+::\+Isometry3d \&target\+\_\+frame\+\_\+offset=Eigen\+::\+Isometry3d\+::\+Identity(), const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&coeffs=Eigen\+::\+Vector\+Xd\+::\+Ones(6))
+\item 
+ifopt\+::\+Constraint\+Set\+::\+Ptr \mbox{\hyperlink{namespacetesseract__planning_a0ffaf9223773224cc11dfdb59285feed}{tesseract\+\_\+planning\+::create\+Joint\+Position\+Constraint}} (const Joint\+Waypoint \&joint\+\_\+waypoint, const trajopt\+\_\+ifopt\+::\+Joint\+Position\+::\+Const\+Ptr \&var, const Eigen\+::\+Vector\+Xd \&)
+\item 
+std\+::vector$<$ ifopt\+::\+Constraint\+Set\+::\+Ptr $>$ \mbox{\hyperlink{namespacetesseract__planning_a2aa911592142af3f76da18b590c5e689}{tesseract\+\_\+planning\+::create\+Collision\+Constraints}} (const std\+::vector$<$ trajopt\+\_\+ifopt\+::\+Joint\+Position\+::\+Const\+Ptr $>$ \&vars, const tesseract\+\_\+environment\+::\+Environment\+::\+Const\+Ptr \&env, const Manipulator\+Info \&manip\+\_\+info, const trajopt\+\_\+ifopt\+::\+Traj\+Opt\+Collision\+Config\+::\+Const\+Ptr \&config, const std\+::vector$<$ int $>$ \&fixed\+\_\+indices)
+\item 
+bool \mbox{\hyperlink{namespacetesseract__planning_aea0acfda2d541adc2eea63cca9f65b64}{tesseract\+\_\+planning\+::add\+Collision\+Constraint}} (trajopt\+\_\+sqp\+::\+QPProblem \&nlp, const std\+::vector$<$ trajopt\+\_\+ifopt\+::\+Joint\+Position\+::\+Const\+Ptr $>$ \&vars, const tesseract\+\_\+environment\+::\+Environment\+::\+Const\+Ptr \&env, const Manipulator\+Info \&manip\+\_\+info, const trajopt\+\_\+ifopt\+::\+Traj\+Opt\+Collision\+Config\+::\+Const\+Ptr \&config, const std\+::vector$<$ int $>$ \&fixed\+\_\+indices)
+\item 
+bool \mbox{\hyperlink{namespacetesseract__planning_a5583cb5d78e1752c81bd14ad5869393e}{tesseract\+\_\+planning\+::add\+Collision\+Cost}} (trajopt\+\_\+sqp\+::\+QPProblem \&nlp, const std\+::vector$<$ trajopt\+\_\+ifopt\+::\+Joint\+Position\+::\+Const\+Ptr $>$ \&vars, const tesseract\+\_\+environment\+::\+Environment\+::\+Const\+Ptr \&env, const Manipulator\+Info \&manip\+\_\+info, const trajopt\+\_\+ifopt\+::\+Traj\+Opt\+Collision\+Config\+::\+Const\+Ptr \&config, const std\+::vector$<$ int $>$ \&fixed\+\_\+indices)
+\item 
+ifopt\+::\+Constraint\+Set\+::\+Ptr \mbox{\hyperlink{namespacetesseract__planning_a80b38fe22cbfcec32fa79f689abf5fec}{tesseract\+\_\+planning\+::create\+Joint\+Velocity\+Constraint}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&target, const std\+::vector$<$ trajopt\+\_\+ifopt\+::\+Joint\+Position\+::\+Const\+Ptr $>$ \&vars, const Eigen\+::\+Vector\+Xd \&coeffs)
+\item 
+bool \mbox{\hyperlink{namespacetesseract__planning_a216be24b4b331e388446241f3200758b}{tesseract\+\_\+planning\+::add\+Joint\+Velocity\+Constraint}} (trajopt\+\_\+sqp\+::\+QPProblem \&nlp, const std\+::vector$<$ trajopt\+\_\+ifopt\+::\+Joint\+Position\+::\+Const\+Ptr $>$ \&vars, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&coeff)
+\item 
+bool \mbox{\hyperlink{namespacetesseract__planning_acaefbdf02206df96ab97a09cf1610105}{tesseract\+\_\+planning\+::add\+Joint\+Velocity\+Squared\+Cost}} (trajopt\+\_\+sqp\+::\+QPProblem \&nlp, const std\+::vector$<$ trajopt\+\_\+ifopt\+::\+Joint\+Position\+::\+Const\+Ptr $>$ \&vars, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&coeff)
+\item 
+ifopt\+::\+Constraint\+Set\+::\+Ptr \mbox{\hyperlink{namespacetesseract__planning_ae856124e83649eb867f966266685819e}{tesseract\+\_\+planning\+::create\+Joint\+Acceleration\+Constraint}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&target, const std\+::vector$<$ trajopt\+\_\+ifopt\+::\+Joint\+Position\+::\+Const\+Ptr $>$ \&vars, const Eigen\+::\+Vector\+Xd \&coeffs)
+\item 
+bool \mbox{\hyperlink{namespacetesseract__planning_a1183808fe926c0a6fb1d5fece15d9dad}{tesseract\+\_\+planning\+::add\+Joint\+Acceleration\+Constraint}} (trajopt\+\_\+sqp\+::\+QPProblem \&nlp, const std\+::vector$<$ trajopt\+\_\+ifopt\+::\+Joint\+Position\+::\+Const\+Ptr $>$ \&vars, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&coeff)
+\item 
+bool \mbox{\hyperlink{namespacetesseract__planning_a3f39cde237235b7e767b518f23802899}{tesseract\+\_\+planning\+::add\+Joint\+Acceleration\+Squared\+Cost}} (trajopt\+\_\+sqp\+::\+QPProblem \&nlp, const std\+::vector$<$ trajopt\+\_\+ifopt\+::\+Joint\+Position\+::\+Const\+Ptr $>$ \&vars, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&coeff)
+\item 
+ifopt\+::\+Constraint\+Set\+::\+Ptr \mbox{\hyperlink{namespacetesseract__planning_a4b6a7c026717824b0f588b88cc9357df}{tesseract\+\_\+planning\+::create\+Joint\+Jerk\+Constraint}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&target, const std\+::vector$<$ trajopt\+\_\+ifopt\+::\+Joint\+Position\+::\+Const\+Ptr $>$ \&vars, const Eigen\+::\+Vector\+Xd \&coeffs)
+\item 
+bool \mbox{\hyperlink{namespacetesseract__planning_ac2db7e409488f9230cb7e7b8708d5762}{tesseract\+\_\+planning\+::add\+Joint\+Jerk\+Constraint}} (trajopt\+\_\+sqp\+::\+QPProblem \&nlp, const std\+::vector$<$ trajopt\+\_\+ifopt\+::\+Joint\+Position\+::\+Const\+Ptr $>$ \&vars, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&coeff)
+\item 
+bool \mbox{\hyperlink{namespacetesseract__planning_aadb81bc948f8ba685cbbcdff2236f946}{tesseract\+\_\+planning\+::add\+Joint\+Jerk\+Squared\+Cost}} (trajopt\+\_\+sqp\+::\+QPProblem \&nlp, const std\+::vector$<$ trajopt\+\_\+ifopt\+::\+Joint\+Position\+::\+Const\+Ptr $>$ \&vars, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&coeff)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+June 18, 2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+TODO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000192}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+LICENSE-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+AS IS\char`\"{} BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}
