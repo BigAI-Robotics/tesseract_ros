@@ -257,7 +257,15 @@ void ROSPlotting::clear(std::string ns)
 static void waitForInputAsync(std::string message)
 {
   ROS_ERROR("%s", message.c_str());
-  std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+  // std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+  std::string s;
+  std::getline(std::cin, s);
+  bool flag = std::cin.fail();
+  if (flag)
+  {
+    std::cout << "EOF detected, exiting..." << std::endl;
+    exit(0);
+  }
 }
 
 void ROSPlotting::waitForInput(std::string message)
