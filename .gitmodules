@@ -19,3 +19,6 @@
 [submodule "ifopt"]
 	path = ifopt
 	url = https://github.com/ethz-adrl/ifopt.git
+[submodule "tesseract_qt"]
+	path = tesseract_qt
+	url = https://github.com/tesseract-robotics/tesseract_qt.git
