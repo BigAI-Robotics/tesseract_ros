@@ -2,6 +2,22 @@
 Changelog for package tesseract_rviz
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.5.1 (2022-06-21)
+------------------
+* Add cartesian interactive marker support
+* Add joint interactive marker to manipulation widget
+* Contributors: Levi Armstrong
+
+0.5.0 (2022-05-17)
+------------------
+* Update to use tesseract_qt (`#154 <https://github.com/tesseract-robotics/tesseract_ros/issues/154>`_)
+* Contributors: Levi Armstrong
+
+0.4.4 (2022-05-13)
+------------------
+* Add new RViz plugins using Tesseract widgets (`#152 <https://github.com/tesseract-robotics/tesseract_ros/issues/152>`_)
+* Contributors: Levi Armstrong
+
 0.4.3 (2022-05-03)
 ------------------
 * Update changes with serialization (`#151 <https://github.com/tesseract-robotics/tesseract_ros/issues/151>`_)

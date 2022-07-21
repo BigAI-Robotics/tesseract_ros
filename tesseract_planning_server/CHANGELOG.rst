@@ -2,6 +2,15 @@
 Changelog for package tesseract_planning_server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.5.1 (2022-06-21)
+------------------
+
+0.5.0 (2022-05-17)
+------------------
+
+0.4.4 (2022-05-13)
+------------------
+
 0.4.3 (2022-05-03)
 ------------------
 * Update changes with serialization (`#151 <https://github.com/tesseract-robotics/tesseract_ros/issues/151>`_)
