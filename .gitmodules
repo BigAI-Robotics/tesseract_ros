@@ -9,7 +9,7 @@
 	url = https://github.com/tesseract-robotics/trajopt.git
 [submodule "tesseract_planning"]
 	path = tesseract_planning
-	url = ssh://git@github.com:BigAI-Robotics/tesseract_planning.git
+	url = git@github.com:BigAI-Robotics/tesseract_planning.git
 	shallow = true
 [submodule "descartes_light"]
 	path = descartes_light
