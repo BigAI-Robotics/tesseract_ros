@@ -4,6 +4,7 @@
 [submodule "tesseract"]
 	path = tesseract
 	url = git@github.com:BigAI-Robotics/tesseract.git
+	shallow = true
 [submodule "trajopt"]
 	path = trajopt
 	url = https://github.com/tesseract-robotics/trajopt.git
