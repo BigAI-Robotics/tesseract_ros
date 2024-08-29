@@ -319,7 +319,7 @@ target_include_directories(${PROJECT_NAME}_planning_response_archive_plugin_core
     ${QT_INCLUDE_DIR}
     ${OGRE_INCLUDE_DIRS}
     ${EIGEN3_INCLUDE_DIRS})
-
+    
 add_library(${PROJECT_NAME}_planning_response_archive_plugin SHARED src/planning_response_archive_plugin/plugin_init.cpp)
 target_link_libraries(${PROJECT_NAME}_planning_response_archive_plugin PRIVATE
     ${PROJECT_NAME}_planning_response_archive_plugin_core
@@ -335,8 +335,8 @@ target_include_directories(${PROJECT_NAME}_planning_response_archive_plugin SYST
     ${catkin_INCLUDE_DIRS}
     ${Boost_INCLUDE_DIRS}
     ${EIGEN3_INCLUDE_DIRS})
-
-
+    
+    
 ## Manipulation Display
 qt_wrap_cpp(${PROJECT_NAME}_manipulation_plugin_core_cpp_MOCS include/tesseract_rviz/tesseract_manipulation_plugin/tesseract_manipulation_display.h)
 
@@ -376,45 +376,34 @@ target_include_directories(${PROJECT_NAME}_manipulation_plugin SYSTEM PRIVATE
     ${Boost_INCLUDE_DIRS}
     ${EIGEN3_INCLUDE_DIRS})
 
-add_executable(${PROJECT_NAME}_test src/test.cpp)
-target_link_libraries(${PROJECT_NAME}_test PRIVATE ${PROJECT_NAME}_trajectory_plugin_core ${catkin_LIBRARIES})
-target_compile_options(${PROJECT_NAME}_test PUBLIC ${TESSERACT_COMPILE_OPTIONS})
-target_cxx_version(${PROJECT_NAME}_test PUBLIC VERSION 17)
-target_include_directories(${PROJECT_NAME}_test PRIVATE
-    "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
-    "$<INSTALL_INTERFACE:include>")
-target_include_directories(${PROJECT_NAME}_test SYSTEM PRIVATE
-    ${catkin_INCLUDE_DIRS})
-
-
 #######################################
 ## New Panels using tesseract_widget ##
 #######################################
 find_package(tesseract_qt REQUIRED)
 
 # Environment Panel
-qt_wrap_cpp(${PROJECT_NAME}_environment_plugin_core_cpp_MOCS
-  include/tesseract_rviz/environment_plugin/ros_environment_widget.h
-  include/tesseract_rviz/environment_plugin/ros_manipulation_widget.h
-  include/tesseract_rviz/environment_plugin/rostopic_combo_box.h
-  include/tesseract_rviz/environment_plugin/environment_display.h
-  include/tesseract_rviz/environment_plugin/environment_monitor_properties.h
-  include/tesseract_rviz/environment_plugin/joint_trajectory_monitor_properties.h
-  include/tesseract_rviz/environment_plugin/workbench_display.h
-  include/tesseract_rviz/environment_plugin/set_theme_tool.h
+qt_wrap_cpp(${PROJECT_NAME}_cpp_MOCS
+  include/tesseract_rviz/ros_environment_widget.h
+  include/tesseract_rviz/ros_manipulation_widget.h
+  include/tesseract_rviz/rostopic_combo_box.h
+  include/tesseract_rviz/environment_display.h
+  include/tesseract_rviz/environment_monitor_properties.h
+  include/tesseract_rviz/joint_trajectory_monitor_properties.h
+  include/tesseract_rviz/workbench_display.h
+  include/tesseract_rviz/set_theme_tool.h
 )
-add_library(${PROJECT_NAME}_environment_plugin_core SHARED
-  src/environment_plugin/ros_environment_widget.cpp
-  src/environment_plugin/ros_manipulation_widget.cpp
-  src/environment_plugin/rostopic_combo_box.cpp
-  src/environment_plugin/environment_display.cpp
-  src/environment_plugin/environment_monitor_properties.cpp
-  src/environment_plugin/joint_trajectory_monitor_properties.cpp
-  src/environment_plugin/workbench_display.cpp
-  src/environment_plugin/conversions.cpp
-  src/environment_plugin/set_theme_tool.cpp
-  ${${PROJECT_NAME}_environment_plugin_core_cpp_MOCS})
-target_link_libraries(${PROJECT_NAME}_environment_plugin_core PUBLIC
+add_library(${PROJECT_NAME} SHARED
+  src/ros_environment_widget.cpp
+  src/ros_manipulation_widget.cpp
+  src/rostopic_combo_box.cpp
+  src/environment_display.cpp
+  src/environment_monitor_properties.cpp
+  src/joint_trajectory_monitor_properties.cpp
+  src/workbench_display.cpp
+  src/conversions.cpp
+  src/set_theme_tool.cpp
+  ${${PROJECT_NAME}_cpp_MOCS})
+target_link_libraries(${PROJECT_NAME} PUBLIC
     tesseract::tesseract_qt_common
     tesseract::tesseract_qt_environment
     tesseract::tesseract_qt_manipulation
@@ -425,21 +414,21 @@ target_link_libraries(${PROJECT_NAME}_environment_plugin_core PUBLIC
     ${OGRE_LIBRARIES}
     ${QT_LIBRARIES}
     ${Boost_LIBRARIES})
-target_compile_options(${PROJECT_NAME}_environment_plugin_core PUBLIC ${TESSERACT_COMPILE_OPTIONS})
-target_cxx_version(${PROJECT_NAME}_environment_plugin_core PUBLIC VERSION 17)
-target_include_directories(${PROJECT_NAME}_environment_plugin_core PUBLIC
+target_compile_options(${PROJECT_NAME} PUBLIC ${TESSERACT_COMPILE_OPTIONS})
+target_cxx_version(${PROJECT_NAME} PUBLIC VERSION 17)
+target_include_directories(${PROJECT_NAME} PUBLIC
     "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
     "$<INSTALL_INTERFACE:include>")
-target_include_directories(${PROJECT_NAME}_environment_plugin_core SYSTEM PUBLIC
+target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC
     ${catkin_INCLUDE_DIRS}
     ${Boost_INCLUDE_DIRS}
     ${QT_INCLUDE_DIR}
     ${OGRE_INCLUDE_DIRS}
     ${EIGEN3_INCLUDE_DIRS})
 
-add_library(${PROJECT_NAME}_environment_plugin SHARED src/environment_plugin/environment_plugin_init.cpp)
+add_library(${PROJECT_NAME}_environment_plugin SHARED src/environment_plugin_init.cpp)
 target_link_libraries(${PROJECT_NAME}_environment_plugin PRIVATE
-  ${PROJECT_NAME}_environment_plugin_core
+  ${PROJECT_NAME}
   ${catkin_LIBRARIES}
   ${Boost_LIBRARIES})
 target_compile_options(${PROJECT_NAME}_environment_plugin PUBLIC ${TESSERACT_COMPILE_OPTIONS})
@@ -451,9 +440,9 @@ target_include_directories(${PROJECT_NAME}_environment_plugin SYSTEM PRIVATE
     ${catkin_INCLUDE_DIRS}
     ${Boost_INCLUDE_DIRS})
 
-add_library(${PROJECT_NAME}_workbench_plugin SHARED src/environment_plugin/workbench_plugin_init.cpp)
+add_library(${PROJECT_NAME}_workbench_plugin SHARED src/workbench_plugin_init.cpp)
 target_link_libraries(${PROJECT_NAME}_workbench_plugin PRIVATE
-  ${PROJECT_NAME}_environment_plugin_core
+  ${PROJECT_NAME}
   ${catkin_LIBRARIES}
   ${Boost_LIBRARIES})
 target_compile_options(${PROJECT_NAME}_workbench_plugin PUBLIC ${TESSERACT_COMPILE_OPTIONS})
@@ -481,6 +470,7 @@ target_include_directories(${PROJECT_NAME}_workbench_plugin SYSTEM PRIVATE
 
 # Mark executables and/or libraries for installation
 install(TARGETS
+    ${PROJECT_NAME}
     ${PROJECT_NAME}_markers
     ${PROJECT_NAME}_interactive_marker
     ${PROJECT_NAME}_render_tools
@@ -492,7 +482,6 @@ install(TARGETS
     ${PROJECT_NAME}_planning_response_archive_plugin
     ${PROJECT_NAME}_manipulation_plugin_core
     ${PROJECT_NAME}_manipulation_plugin
-    ${PROJECT_NAME}_environment_plugin_core
     ${PROJECT_NAME}_environment_plugin
     ${PROJECT_NAME}_workbench_plugin
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}

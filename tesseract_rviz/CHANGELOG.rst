@@ -2,6 +2,13 @@
 Changelog for package tesseract_rviz
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.14.0 (2022-10-23)
+-------------------
+* Update to use modify allowed collisions command
+* Remove planning archive plugin
+* Remove legacy rviz plugins
+* Contributors: Levi Armstrong
+
 0.6.0 (2022-08-25)
 ------------------
 * Fix ogre getAABB

@@ -525,7 +525,7 @@ void InteractiveMarker::publishFeedback(bool mouse_point_valid, const Ogre::Vect
   Ogre::Vector3 world_position = reference_node_->convertLocalToWorldPosition(position_);
   Ogre::Quaternion world_orientation = reference_node_->convertLocalToWorldOrientation(orientation_);
 
-  toEigen(transform, world_position, world_orientation);
+  toEigenLegacy(transform, world_position, world_orientation);
 
   if (mouse_point_valid)
   {

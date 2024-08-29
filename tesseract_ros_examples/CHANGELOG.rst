@@ -2,6 +2,11 @@
 Changelog for package tesseract_ros_examples
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.14.0 (2022-10-23)
+-------------------
+* Remove legacy rviz plugins
+* Contributors: Levi Armstrong
+
 0.6.0 (2022-08-25)
 ------------------
 

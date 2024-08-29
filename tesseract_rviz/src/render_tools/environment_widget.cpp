@@ -437,19 +437,26 @@ bool EnvironmentWidget::applyEnvironmentCommands(const tesseract_environment::Co
       visualization_->setLinkCollisionEnabled(cmd.getLinkName(), cmd.getEnabled());
       break;
     }
-    case tesseract_environment::CommandType::ADD_ALLOWED_COLLISION:
+    case tesseract_environment::CommandType::MODIFY_ALLOWED_COLLISIONS:
     {
       // Done
-      const auto& cmd = static_cast<const tesseract_environment::AddAllowedCollisionCommand&>(command);
-
-      visualization_->addAllowedCollision(cmd.getLinkName1(), cmd.getLinkName2(), cmd.getReason());
-      break;
-    }
-    case tesseract_environment::CommandType::REMOVE_ALLOWED_COLLISION:
-    {
-      // Done
-      const auto& cmd = static_cast<const tesseract_environment::RemoveAllowedCollisionCommand&>(command);
-      visualization_->removeAllowedCollision(cmd.getLinkName1(), cmd.getLinkName2());
+      const auto& cmd = static_cast<const tesseract_environment::ModifyAllowedCollisionsCommand&>(command);
+      switch (cmd.getModifyType())
+      {
+        case tesseract_environment::ModifyAllowedCollisionsType::ADD:
+        {
+          for (const auto& entry : cmd.getAllowedCollisionMatrix().getAllAllowedCollisions())
+            visualization_->addAllowedCollision(entry.first.first, entry.first.second, entry.second);
+          break;
+        }
+        case tesseract_environment::ModifyAllowedCollisionsType::REMOVE:
+        {
+          for (const auto& entry : cmd.getAllowedCollisionMatrix().getAllAllowedCollisions())
+            visualization_->removeAllowedCollision(entry.first.first, entry.first.second);
+          break;
+        }
+        default: break;
+      }
       break;
     }
     case tesseract_environment::CommandType::REMOVE_ALLOWED_COLLISION_LINK:

@@ -427,7 +427,7 @@ bool ManipulationWidget::changeManipulator(const QString& manipulator)
         env_state_.link_transforms.at(tcp_frame_property_->getString().toStdString()) * tcp_offset_;
     Ogre::Vector3 position;
     Ogre::Quaternion orientation;
-    toOgre(position, orientation, pose);
+    toOgreLegacy(position, orientation, pose);
     interactive_marker_->setPose(position, orientation, "");
 
     interactive_marker_->setShowAxes(false);
@@ -506,7 +506,7 @@ bool ManipulationWidget::changeManipulator(const QString& manipulator)
       Eigen::Isometry3d pose = env_state_.link_transforms.at(joint->child_link_name);
       Ogre::Vector3 position;
       Ogre::Quaternion orientation;
-      toOgre(position, orientation, pose);
+      toOgreLegacy(position, orientation, pose);
       interactive_marker->setPose(position, orientation, "");
       interactive_marker->setShowAxes(false);
       interactive_marker->setShowVisualAids(false);
@@ -971,7 +971,7 @@ void ManipulationWidget::updateCartesianMarkerVisualization()
   Eigen::Isometry3d pose = env_state_.link_transforms.at(tcp_frame_property_->getString().toStdString()) * tcp_offset_;
   Ogre::Vector3 position;
   Ogre::Quaternion orientation;
-  toOgre(position, orientation, pose);
+  toOgreLegacy(position, orientation, pose);
   interactive_marker_->setPose(position, orientation, "");
 }
 
@@ -984,7 +984,7 @@ void ManipulationWidget::udpateJointMarkerVisualization()
     Eigen::Isometry3d pose = env_state_.link_transforms.at(joint->child_link_name);
     Ogre::Vector3 position;
     Ogre::Quaternion orientation;
-    toOgre(position, orientation, pose);
+    toOgreLegacy(position, orientation, pose);
 
     joint_marker.second->setPose(position, orientation, "");
   }

@@ -1482,7 +1482,7 @@ void LinkWidget::setCurrentTransform(const Eigen::Isometry3d& transform)
 {
   Ogre::Vector3 position;
   Ogre::Quaternion orientation;
-  toOgre(position, orientation, transform);
+  toOgreLegacy(position, orientation, transform);
 
   if (visual_current_node_ != nullptr)
   {
@@ -1510,7 +1510,7 @@ void LinkWidget::setStartTransform(const Eigen::Isometry3d& transform)
 {
   Ogre::Vector3 position;
   Ogre::Quaternion orientation;
-  toOgre(position, orientation, transform);
+  toOgreLegacy( position, orientation, transform);
 
   if (visual_current_node_ != nullptr)
   {
@@ -1529,7 +1529,7 @@ void LinkWidget::setEndTransform(const Eigen::Isometry3d& transform)
 {
   Ogre::Vector3 position;
   Ogre::Quaternion orientation;
-  toOgre(position, orientation, transform);
+  toOgreLegacy(position, orientation, transform);
 
   if (visual_current_node_ != nullptr)
   {
@@ -1560,7 +1560,7 @@ void LinkWidget::showTrajectory()
     {
       Ogre::Vector3 position;
       Ogre::Quaternion orientation;
-      toOgre(position, orientation, trajectory_[i]);
+      toOgreLegacy(position, orientation, trajectory_[i]);
       if (i < current_size)
       {
         if (visual_current_node_ != nullptr)
@@ -1612,7 +1612,7 @@ void LinkWidget::showTrajectory()
       {
         Ogre::Vector3 position;
         Ogre::Quaternion orientation;
-        toOgre(position, orientation, trajectory_[i]);
+        toOgreLegacy(position, orientation, trajectory_[i]);
 
         if (visual_current_node_ != nullptr)
         {
