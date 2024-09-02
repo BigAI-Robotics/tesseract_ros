@@ -1,6 +1,6 @@
-#include <tesseract_rviz/environment_plugin/ros_manipulation_widget.h>
-#include <tesseract_rviz/environment_plugin/conversions.h>
-#include <tesseract_rviz/environment_plugin/conversions.h>
+#include <tesseract_rviz/ros_manipulation_widget.h>
+#include <tesseract_rviz/conversions.h>
+#include <tesseract_rviz/conversions.h>
 #include <tesseract_rviz/conversions.h>
 #include <tesseract_rviz/markers/utils.h>
 #include <tesseract_rviz/interactive_marker/interactive_marker.h>
@@ -219,7 +219,7 @@ void ROSManipulationWidget::onTCPChanged()
     Eigen::Isometry3d pose = getActiveCartesianTransform(true);
     Ogre::Vector3 position;
     Ogre::Quaternion orientation;
-    toOgre(position, orientation, pose);
+    toOgreLegacy(position, orientation, pose);
     data_->interactive_marker->setPose(position, orientation, "");
   }
 }
@@ -242,7 +242,7 @@ void ROSManipulationWidget::addInteractiveMarker()
   Eigen::Isometry3d pose = state.link_transforms.at(tcp_name);  // * tcp_offset_;
   Ogre::Vector3 position;
   Ogre::Quaternion orientation;
-  toOgre(position, orientation, pose);
+  toOgreLegacy(position, orientation, pose);
   data_->interactive_marker->setPose(position, orientation, "");
 
   data_->interactive_marker->setShowAxes(false);
@@ -323,7 +323,7 @@ void ROSManipulationWidget::addInteractiveMarker()
     Eigen::Isometry3d pose = state.link_transforms.at(joint->child_link_name);
     Ogre::Vector3 position;
     Ogre::Quaternion orientation;
-    toOgre(position, orientation, pose);
+    toOgreLegacy(position, orientation, pose);
     interactive_marker->setPose(position, orientation, "");
     interactive_marker->setShowAxes(false);
     interactive_marker->setShowVisualAids(false);
@@ -501,7 +501,7 @@ void ROSManipulationWidget::onRender(float dt)
             auto container = entity_manager->getEntityContainer(pair.first);
             Ogre::Vector3 position;
             Ogre::Quaternion orientation;
-            toOgre(position, orientation, pair.second);
+            toOgreLegacy(position, orientation, pair.second);
 
             auto entity = container->getTrackedEntity(tesseract_gui::EntityContainer::VISUAL_NS, pair.first);
             Ogre::SceneNode* sn = data_->context->getSceneManager()->getSceneNode(entity.unique_name);
@@ -519,7 +519,7 @@ void ROSManipulationWidget::onRender(float dt)
             Eigen::Isometry3d pose = getActiveCartesianTransform(true);
             Ogre::Vector3 position;
             Ogre::Quaternion orientation;
-            toOgre(position, orientation, pose);
+            toOgreLegacy(position, orientation, pose);
             data_->interactive_marker->setPose(position, orientation, "");
           }
 
@@ -532,7 +532,7 @@ void ROSManipulationWidget::onRender(float dt)
                   render_state.link_transforms.at(data_->joint_interactive_marker_link_names[jm.first]);
               Ogre::Vector3 position;
               Ogre::Quaternion orientation;
-              toOgre(position, orientation, pose);
+              toOgreLegacy(position, orientation, pose);
               jm.second->setPose(position, orientation, "");
             }
           }

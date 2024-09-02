@@ -598,7 +598,7 @@ bool VisualizationWidget::changeJointOrigin(const std::string& name, const Eigen
   JointWidget* joint = found->second;
   Ogre::Vector3 pos;
   Ogre::Quaternion quat;
-  toOgre(pos, quat, new_origin);
+  toOgreLegacy(pos, quat, new_origin);
   joint->setTransforms(pos, quat);
 
   scene_graph_->changeJointOrigin(name, new_origin);

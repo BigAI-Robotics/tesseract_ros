@@ -93,17 +93,17 @@ class EnvLinkSelectionHandler;
 class JointWidget;
 using EnvLinkSelectionHandlerPtr = std::shared_ptr<EnvLinkSelectionHandler>;
 
-enum OctreeVoxelRenderMode
-{
-  OCTOMAP_FREE_VOXELS = 1,
-  OCTOMAP_OCCUPIED_VOXELS = 2
-};
+// enum OctreeVoxelRenderMode
+// {
+//   OCTOMAP_FREE_VOXELS = 1,
+//   OCTOMAP_OCCUPIED_VOXELS = 2
+// };
 
-enum OctreeVoxelColorMode
-{
-  OCTOMAP_Z_AXIS_COLOR,
-  OCTOMAP_PROBABLILTY_COLOR,
-};
+// enum OctreeVoxelColorMode
+// {
+//   OCTOMAP_Z_AXIS_COLOR,
+//   OCTOMAP_PROBABLILTY_COLOR,
+// };
 
 /**
  * @brief The EnvLink class

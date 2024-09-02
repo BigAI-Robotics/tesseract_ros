@@ -2,6 +2,14 @@
 Changelog for package tesseract_planning_server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.14.0 (2022-10-23)
+-------------------
+* Remove planning archive plugin
+* Replace tesseract_process_managers with tesseract_task_composer package
+* Update planning server to legacy simple planner
+* Update to leverage legacy simple profile
+* Contributors: Levi Armstrong
+
 0.6.0 (2022-08-25)
 ------------------
 * Add initial_state to the PlanningResponse message
